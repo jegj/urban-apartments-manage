@@ -1,5 +1,14 @@
 <!doctype html>
-<html lang="en" class="layout-navbar-fixed layout-wide">
+
+<html
+  lang="en"
+  class="layout-navbar-fixed layout-wide"
+  dir="ltr"
+  data-skin="default"
+  data-bs-theme="light"
+  data-assets-path="/public/"
+  data-template="front-pages"
+>
   <head>
     <meta charset="utf-8" />
     <meta
@@ -7,11 +16,9 @@
       content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0"
     />
     <meta name="robots" content="noindex, nofollow" />
-    <title>
-      Demo: Landing Page - Front Pages | Materialize - Bootstrap Dashboard PRO
-    </title>
+    <title>Urban Apartment #106</title>
 
-    <meta name="description" content="" />
+    <meta name="description" content="Urban Apartment #106 guide" />
 
     <!-- Favicon -->
     <link
@@ -31,7 +38,7 @@
     <link rel="stylesheet" href="/public/vendor/fonts/iconify-icons.css" />
 
     <!-- Core CSS -->
-    <!-- build:css assets/vendor/css/theme.css -->
+    <!-- build:css vendor/css/theme.css -->
 
     <link
       rel="stylesheet"
@@ -49,17 +56,10 @@
 
     <!-- endbuild -->
 
-    <link
-      rel="stylesheet"
-      href="/public/vendor/libs/nouislider/nouislider.css"
-    />
-    <link rel="stylesheet" href="/public/vendor/libs/swiper/swiper.css" />
-
     <!-- Page CSS -->
-
     <link
       rel="stylesheet"
-      href="/public/vendor/css/pages/front-page-landing.css"
+      href="/public/vendor/css/pages/front-page-help-center.css"
     />
 
     <!-- Helpers -->
@@ -220,7 +220,7 @@
                   >Contact us</a
                 >
               </li>
-              <li class="nav-item mega-dropdown">
+              <li class="nav-item mega-dropdown active">
                 <a
                   href="javascript:void(0);"
                   class="nav-link dropdown-toggle navbar-ex-14-mega-dropdown mega-dropdown fw-medium"
@@ -275,7 +275,7 @@
                             <span data-i18n="Checkout">Checkout</span>
                           </a>
                         </li>
-                        <li class="nav-item">
+                        <li class="nav-item active">
                           <a
                             class="nav-link mega-dropdown-link"
                             href="help-center-landing.html"
@@ -635,1862 +635,205 @@
 
     <!-- Sections:Start -->
 
-    <div data-bs-spy="scroll" class="scrollspy-example">
-      <!-- Hero: Start -->
-      <section
-        id="landingHero"
-        class="section-py landing-hero position-relative"
+    <!-- Help Center Header: Start -->
+    <section
+      class="section-py first-section-pt help-center-header position-relative overflow-hidden"
+    >
+      <img
+        class="banner-bg-img z-n1"
+        src="/public/img/pages/header-light.png"
+        alt="Help center header"
+        data-app-light-img="pages/header-light.png"
+        data-app-dark-img="pages/header-dark.png"
+      />
+      <h4 class="text-center text-primary">Hello, how can we help?</h4>
+      <div
+        class="input-wrapper my-4 input-group input-group-merge position-relative mx-auto"
       >
-        <img
-          src="/public/img/front-pages/backgrounds/hero-bg-light.png"
-          alt="hero background"
-          class="position-absolute top-0 start-0 w-100 h-100 z-n1"
-          data-speed="1"
-          data-app-light-img="front-pages/backgrounds/hero-bg-light.png"
-          data-app-dark-img="front-pages/backgrounds/hero-bg-dark.png"
+        <span class="input-group-text" id="basic-addon1"
+          ><i class="icon-base ri ri-search-line"></i
+        ></span>
+        <input
+          type="text"
+          class="form-control"
+          placeholder="Search"
+          aria-label="Search"
+          aria-describedby="basic-addon1"
         />
-        <div class="container">
-          <div class="hero-text-box text-center">
-            <h2 class="text-primary hero-title mb-4">
-              All in one sass application for your business
-            </h2>
-            <h2 class="h6 mb-8 lh-md">
-              No coding required to make customisations.<br />The live
-              customiser has everything your marketing need.
-            </h2>
-            <a href="#landingPricing" class="btn btn-lg btn-primary"
-              >Get early access</a
-            >
-          </div>
-          <div class="position-relative hero-animation-img">
-            <a
-              href="../vertical-menu-template/dashboards-crm.html"
-              target="_blank"
-            >
-              <div class="hero-dashboard-img text-center">
-                <img
-                  src="/public/img/front-pages/landing-page/hero-dashboard-light.png"
-                  alt="hero dashboard"
-                  class="animation-img"
-                  data-speed="2"
-                  data-app-light-img="front-pages/landing-page/hero-dashboard-light.png"
-                  data-app-dark-img="front-pages/landing-page/hero-dashboard-dark.png"
-                />
-              </div>
-              <div class="position-absolute hero-elements-img">
-                <img
-                  src="/public/img/front-pages/landing-page/hero-elements-light.png"
-                  alt="hero elements"
-                  class="animation-img"
-                  data-speed="4"
-                  data-app-light-img="front-pages/landing-page/hero-elements-light.png"
-                  data-app-dark-img="front-pages/landing-page/hero-elements-dark.png"
-                />
-              </div>
-            </a>
-          </div>
-        </div>
-      </section>
-      <!-- Hero: End -->
+      </div>
+      <p class="text-center px-4 mb-0">
+        Common troubleshooting topics: eCommerce, Blogging to payment
+      </p>
+    </section>
+    <!-- Help Center Header: End -->
 
-      <!-- Useful features: Start -->
-      <section id="landingFeatures" class="section-py landing-features">
-        <div class="container">
-          <h6
-            class="text-center d-flex justify-content-center align-items-center mb-6"
-          >
-            <img
-              src="/public/img/front-pages/icons/section-title-icon.png"
-              alt="section title icon"
-              class="me-3"
-              height="19"
-            />
-            <span class="text-uppercase">Useful features</span>
-          </h6>
-          <h5 class="text-center mb-2">
-            <span class="h4 fw-bold">Everything you need</span> to start your
-            next project
-          </h5>
-          <p class="text-center fw-medium mb-4 mb-md-12">
-            Not just a set of tools, the package includes ready-to-deploy
-            conceptual application.
-          </p>
-          <div class="features-icon-wrapper row gx-0 gy-12 gx-sm-6">
-            <div class="col-lg-4 col-sm-6 text-center features-icon-box">
-              <div class="features-icon mb-4">
-                <img
-                  src="/public/img/front-pages/icons/laptop-charging.png"
-                  alt="laptop charging"
-                />
+    <!-- Popular Articles: Start -->
+    <section class="section-py">
+      <div class="container">
+        <h4 class="text-center mb-6">Popular Articles</h4>
+        <div class="row">
+          <div class="col-lg-10 mx-auto">
+            <div class="row gy-6 gy-md-0">
+              <div class="col-md-4">
+                <div class="card border shadow-none">
+                  <div class="card-body text-center">
+                    <svg
+                      width="58"
+                      height="58"
+                      viewBox="0 0 58 58"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <g opacity="0.2">
+                        <path
+                          fill-rule="evenodd"
+                          clip-rule="evenodd"
+                          d="M48.9019 33.6218L41.7878 25.0804C42.0597 30.314 40.7683 36.4086 36.7808 43.364L43.5777 48.8015C43.8194 48.9935 44.1061 49.1205 44.4106 49.1706C44.7151 49.2207 45.0274 49.1922 45.3178 49.0879C45.6083 48.9835 45.8673 48.8067 46.0702 48.5742C46.2732 48.3417 46.4134 48.0612 46.4777 47.7593L49.2644 35.1625C49.3316 34.8954 49.3337 34.6161 49.2706 34.348C49.2076 34.08 49.0811 33.8309 48.9019 33.6218ZM10.2956 33.7578L17.4097 25.239C17.1378 30.4726 18.4292 36.5672 22.4167 43.5L15.6198 48.9375C15.3797 49.1294 15.0947 49.257 14.7916 49.3084C14.4885 49.3598 14.1773 49.3333 13.8873 49.2314C13.5973 49.1294 13.338 48.9554 13.1338 48.7256C12.9295 48.4958 12.7871 48.2179 12.7198 47.9179L9.93313 35.2984C9.86594 35.0313 9.8638 34.7521 9.92688 34.484C9.98995 34.2159 10.1164 33.9669 10.2956 33.7578Z"
+                          fill="currentColor"
+                        ></path>
+                        <path
+                          fill-rule="evenodd"
+                          clip-rule="evenodd"
+                          d="M48.9019 33.6218L41.7878 25.0804C42.0597 30.314 40.7683 36.4086 36.7808 43.364L43.5777 48.8015C43.8194 48.9935 44.1061 49.1205 44.4106 49.1706C44.7151 49.2207 45.0274 49.1922 45.3178 49.0879C45.6083 48.9835 45.8673 48.8067 46.0702 48.5742C46.2732 48.3417 46.4134 48.0612 46.4777 47.7593L49.2644 35.1625C49.3316 34.8954 49.3337 34.6161 49.2706 34.348C49.2076 34.08 49.0811 33.8309 48.9019 33.6218ZM10.2956 33.7578L17.4097 25.239C17.1378 30.4726 18.4292 36.5672 22.4167 43.5L15.6198 48.9375C15.3797 49.1294 15.0947 49.257 14.7916 49.3084C14.4885 49.3598 14.1773 49.3333 13.8873 49.2314C13.5973 49.1294 13.338 48.9554 13.1338 48.7256C12.9295 48.4958 12.7871 48.2179 12.7198 47.9179L9.93313 35.2984C9.86594 35.0313 9.8638 34.7521 9.92688 34.484C9.98995 34.2159 10.1164 33.9669 10.2956 33.7578Z"
+                          fill="currentColor"
+                          fill-opacity="0.2"
+                        ></path>
+                      </g>
+                      <path
+                        fill-rule="evenodd"
+                        clip-rule="evenodd"
+                        d="M27.9017 3.71102C28.3979 3.30011 29.0221 3.07513 29.6666 3.07513C30.3127 3.07513 30.9383 3.30117 31.435 3.71394C33.6315 5.50224 38.386 9.93871 41.0105 16.7606C41.9219 19.1296 42.5713 21.7739 42.7735 24.6785L49.8022 33.113C50.0828 33.4423 50.2809 33.8338 50.38 34.255C50.4785 34.6735 50.4764 35.1093 50.374 35.5267L47.5901 48.1336L47.5894 48.1367C47.485 48.6022 47.264 49.0335 46.9471 49.39C46.6302 49.7465 46.2278 50.0166 45.7778 50.1748C45.3278 50.333 44.8449 50.3742 44.3746 50.2944C43.9043 50.2146 43.4621 50.0165 43.0894 49.7188L43.0889 49.7184L36.566 44.5H22.7675L16.2445 49.7184L16.2441 49.7188C15.8714 50.0165 15.4291 50.2146 14.9588 50.2944C14.4885 50.3742 14.0057 50.333 13.5556 50.1748C13.1056 50.0166 12.7032 49.7465 12.3863 49.39C12.0694 49.0335 11.8484 48.6022 11.7441 48.1367L11.7434 48.1336L8.95943 35.5267C8.85707 35.1093 8.85499 34.6735 8.95346 34.255C9.05262 33.8335 9.25088 33.4419 9.53173 33.1125L16.4274 24.8553C16.6112 21.877 17.2734 19.1695 18.2135 16.7491C20.8639 9.92541 25.6801 5.4896 27.9017 3.71102ZM40.8041 25.2385C40.7893 25.1573 40.7846 25.0748 40.7899 24.993C40.6159 22.2127 40.0004 19.7051 39.1438 17.4787C36.6951 11.1136 32.2331 6.94203 30.1682 5.26158L30.1583 5.25355L30.1584 5.25349C30.0204 5.13826 29.8464 5.07513 29.6666 5.07513C29.4869 5.07513 29.3128 5.13826 29.1748 5.25349L29.1585 5.26684C27.0721 6.93594 22.5504 11.1072 20.0778 17.4732C19.1887 19.7623 18.5587 22.3492 18.4096 25.2244C18.4102 25.2674 18.4081 25.3106 18.4032 25.3535C18.1745 30.253 19.3435 35.9842 22.9982 42.5H36.3292C39.938 35.9325 41.0647 30.1631 40.8041 25.2385ZM48.2696 34.398L42.8122 27.8492C42.6094 32.4348 41.2748 37.5835 38.2005 43.2464L44.3378 48.1563C44.4455 48.2423 44.5733 48.2995 44.7091 48.3226C44.845 48.3456 44.9845 48.3337 45.1145 48.288C45.2445 48.2423 45.3607 48.1643 45.4523 48.0613C45.5436 47.9586 45.6073 47.8344 45.6376 47.7004L45.6378 47.6992L48.4239 35.0828L48.4272 35.0682L48.4305 35.0545C48.4587 34.9425 48.4596 34.8255 48.4332 34.7131C48.4067 34.6007 48.3537 34.4963 48.2786 34.4086L48.2695 34.3981L48.2696 34.398ZM16.4139 27.9916L11.0632 34.3988L11.0549 34.4087L11.0549 34.4086C10.9798 34.4963 10.9267 34.6007 10.9003 34.7131C10.8738 34.8255 10.8747 34.9425 10.9029 35.0545C10.9053 35.0639 10.9075 35.0734 10.9096 35.0828L13.6956 47.6992L13.6959 47.7005C13.7262 47.8345 13.7899 47.9586 13.8812 48.0613C13.9727 48.1643 14.089 48.2423 14.219 48.288C14.349 48.3337 14.4885 48.3456 14.6243 48.3226C14.7602 48.2995 14.888 48.2423 14.9956 48.1563L21.1271 43.2511C18.0233 37.6471 16.6517 32.5443 16.4139 27.9916ZM25.0417 50.75C25.0417 50.1977 25.4895 49.75 26.0417 49.75H33.2917C33.844 49.75 34.2917 50.1977 34.2917 50.75C34.2917 51.3023 33.844 51.75 33.2917 51.75H26.0417C25.4895 51.75 25.0417 51.3023 25.0417 50.75ZM32.3855 21.75C32.3855 23.2515 31.1683 24.4688 29.6667 24.4688C28.1652 24.4688 26.948 23.2515 26.948 21.75C26.948 20.2485 28.1652 19.0313 29.6667 19.0313C31.1683 19.0313 32.3855 20.2485 32.3855 21.75Z"
+                        fill="currentColor"
+                      ></path>
+                      <path
+                        fill-rule="evenodd"
+                        clip-rule="evenodd"
+                        d="M27.9017 3.71102C28.3979 3.30011 29.0221 3.07513 29.6666 3.07513C30.3127 3.07513 30.9383 3.30117 31.435 3.71394C33.6315 5.50224 38.386 9.93871 41.0105 16.7606C41.9219 19.1296 42.5713 21.7739 42.7735 24.6785L49.8022 33.113C50.0828 33.4423 50.2809 33.8338 50.38 34.255C50.4785 34.6735 50.4764 35.1093 50.374 35.5267L47.5901 48.1336L47.5894 48.1367C47.485 48.6022 47.264 49.0335 46.9471 49.39C46.6302 49.7465 46.2278 50.0166 45.7778 50.1748C45.3278 50.333 44.8449 50.3742 44.3746 50.2944C43.9043 50.2146 43.4621 50.0165 43.0894 49.7188L43.0889 49.7184L36.566 44.5H22.7675L16.2445 49.7184L16.2441 49.7188C15.8714 50.0165 15.4291 50.2146 14.9588 50.2944C14.4885 50.3742 14.0057 50.333 13.5556 50.1748C13.1056 50.0166 12.7032 49.7465 12.3863 49.39C12.0694 49.0335 11.8484 48.6022 11.7441 48.1367L11.7434 48.1336L8.95943 35.5267C8.85707 35.1093 8.85499 34.6735 8.95346 34.255C9.05262 33.8335 9.25088 33.4419 9.53173 33.1125L16.4274 24.8553C16.6112 21.877 17.2734 19.1695 18.2135 16.7491C20.8639 9.92541 25.6801 5.4896 27.9017 3.71102ZM40.8041 25.2385C40.7893 25.1573 40.7846 25.0748 40.7899 24.993C40.6159 22.2127 40.0004 19.7051 39.1438 17.4787C36.6951 11.1136 32.2331 6.94203 30.1682 5.26158L30.1583 5.25355L30.1584 5.25349C30.0204 5.13826 29.8464 5.07513 29.6666 5.07513C29.4869 5.07513 29.3128 5.13826 29.1748 5.25349L29.1585 5.26684C27.0721 6.93594 22.5504 11.1072 20.0778 17.4732C19.1887 19.7623 18.5587 22.3492 18.4096 25.2244C18.4102 25.2674 18.4081 25.3106 18.4032 25.3535C18.1745 30.253 19.3435 35.9842 22.9982 42.5H36.3292C39.938 35.9325 41.0647 30.1631 40.8041 25.2385ZM48.2696 34.398L42.8122 27.8492C42.6094 32.4348 41.2748 37.5835 38.2005 43.2464L44.3378 48.1563C44.4455 48.2423 44.5733 48.2995 44.7091 48.3226C44.845 48.3456 44.9845 48.3337 45.1145 48.288C45.2445 48.2423 45.3607 48.1643 45.4523 48.0613C45.5436 47.9586 45.6073 47.8344 45.6376 47.7004L45.6378 47.6992L48.4239 35.0828L48.4272 35.0682L48.4305 35.0545C48.4587 34.9425 48.4596 34.8255 48.4332 34.7131C48.4067 34.6007 48.3537 34.4963 48.2786 34.4086L48.2695 34.3981L48.2696 34.398ZM16.4139 27.9916L11.0632 34.3988L11.0549 34.4087L11.0549 34.4086C10.9798 34.4963 10.9267 34.6007 10.9003 34.7131C10.8738 34.8255 10.8747 34.9425 10.9029 35.0545C10.9053 35.0639 10.9075 35.0734 10.9096 35.0828L13.6956 47.6992L13.6959 47.7005C13.7262 47.8345 13.7899 47.9586 13.8812 48.0613C13.9727 48.1643 14.089 48.2423 14.219 48.288C14.349 48.3337 14.4885 48.3456 14.6243 48.3226C14.7602 48.2995 14.888 48.2423 14.9956 48.1563L21.1271 43.2511C18.0233 37.6471 16.6517 32.5443 16.4139 27.9916ZM25.0417 50.75C25.0417 50.1977 25.4895 49.75 26.0417 49.75H33.2917C33.844 49.75 34.2917 50.1977 34.2917 50.75C34.2917 51.3023 33.844 51.75 33.2917 51.75H26.0417C25.4895 51.75 25.0417 51.3023 25.0417 50.75ZM32.3855 21.75C32.3855 23.2515 31.1683 24.4688 29.6667 24.4688C28.1652 24.4688 26.948 23.2515 26.948 21.75C26.948 20.2485 28.1652 19.0313 29.6667 19.0313C31.1683 19.0313 32.3855 20.2485 32.3855 21.75Z"
+                        fill="currentColor"
+                        fill-opacity="0.2"
+                      ></path>
+                    </svg>
+                    <h5 class="my-3">Getting Started</h5>
+                    <p class="mb-3">
+                      Whether you're new or you're a power user, this article
+                      will…
+                    </p>
+                    <a
+                      class="btn btn-outline-primary"
+                      href="help-center-article.html"
+                      >Read More</a
+                    >
+                  </div>
+                </div>
               </div>
-              <h5 class="mb-2">Quality Code</h5>
-              <p class="features-icon-description">
-                Code structure that all developers will easily understand and
-                fall in love with.
-              </p>
-            </div>
-            <div class="col-lg-4 col-sm-6 text-center features-icon-box">
-              <div class="features-icon mb-4">
-                <img
-                  src="/public/img/front-pages/icons/transition-up.png"
-                  alt="transition up"
-                />
-              </div>
-              <h5 class="mb-2">Continuous Updates</h5>
-              <p class="features-icon-description">
-                Free updates for the next 12 months, including new demos and
-                features.
-              </p>
-            </div>
-            <div class="col-lg-4 col-sm-6 text-center features-icon-box">
-              <div class="features-icon mb-4">
-                <img src="/public/img/front-pages/icons/edit.png" alt="edit" />
-              </div>
-              <h5 class="mb-2">Stater-Kit</h5>
-              <p class="features-icon-description">
-                Start your project quickly without having to remove unnecessary
-                features.
-              </p>
-            </div>
-            <div class="col-lg-4 col-sm-6 text-center features-icon-box">
-              <div class="features-icon mb-4">
-                <img
-                  src="/public/img/front-pages/icons/3d-select-solid.png"
-                  alt="3d select solid"
-                />
-              </div>
-              <h5 class="mb-2">API Ready</h5>
-              <p class="features-icon-description">
-                Just change the endpoint and see your own data loaded within
-                seconds.
-              </p>
-            </div>
-            <div class="col-lg-4 col-sm-6 text-center features-icon-box">
-              <div class="features-icon mb-4">
-                <img
-                  src="/public/img/front-pages/icons/lifebelt.png"
-                  alt="lifebelt"
-                />
-              </div>
-              <h5 class="mb-2">Excellent Support</h5>
-              <p class="features-icon-description">
-                An easy-to-follow doc with lots of references and code examples.
-              </p>
-            </div>
-            <div class="col-lg-4 col-sm-6 text-center features-icon-box">
-              <div class="features-icon mb-4">
-                <img
-                  src="/public/img/front-pages/icons/google-docs.png"
-                  alt="google docs"
-                />
-              </div>
-              <h5 class="mb-2">Well Documented</h5>
-              <p class="features-icon-description">
-                An easy-to-follow doc with lots of references and code examples.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-      <!-- Useful features: End -->
 
-      <!-- Real customers reviews: Start -->
-      <section id="landingReviews" class="section-py bg-body landing-reviews">
-        <div class="container">
-          <h6
-            class="text-center d-flex justify-content-center align-items-center mb-6"
-          >
-            <img
-              src="/public/img/front-pages/icons/section-title-icon.png"
-              alt="section title icon"
-              class="me-3"
-              height="19"
-            />
-            <span class="text-uppercase">real customers reviews</span>
-          </h6>
-          <h5 class="text-center mb-2">
-            <span class="h4 fw-bold">Success stories</span> from clients
-          </h5>
-          <p class="text-center fw-medium mb-4 mb-md-12">
-            See what our customers have to say about their experience.
-          </p>
-        </div>
-        <div class="swiper-reviews-carousel overflow-hidden mb-12 pt-4">
-          <div class="swiper" id="swiper-reviews">
-            <div class="swiper-wrapper">
-              <div class="swiper-slide">
-                <div class="card h-100">
-                  <div
-                    class="card-body text-body d-flex flex-column justify-content-between text-center p-lg-8"
-                  >
-                    <div class="mb-4">
-                      <img
-                        src="/public/img/front-pages/branding/logo-4.png"
-                        alt="client logo"
-                        class="client-logo img-fluid"
-                      />
-                    </div>
-                    <p class="text-heading">
-                      “I've never used a theme as versatile and flexible as
-                      Vuexy. It's my go to for building dashboard sites on
-                      almost any project.”
+              <div class="col-md-4">
+                <div class="card border shadow-none">
+                  <div class="card-body text-center">
+                    <svg
+                      width="58"
+                      height="58"
+                      viewBox="0 0 58 58"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        clip-rule="evenodd"
+                        d="M32.2689 8.56722C31.7876 9.05354 31.3688 9.84814 31.029 10.8704C30.6946 11.8767 30.4652 13.0152 30.31 14.1032C30.1553 15.1872 30.0776 16.197 30.0386 16.9371C30.0358 16.991 30.0332 17.0434 30.0307 17.0943C30.0816 17.0918 30.134 17.0892 30.1879 17.0864C30.928 17.0475 31.9378 16.9697 33.0218 16.815C34.1098 16.6598 35.2483 16.4304 36.2546 16.096C37.2769 15.7562 38.0715 15.3374 38.5578 14.8561C39.3907 14.0223 39.8587 12.8919 39.8587 11.7133C39.8587 10.5339 39.3901 9.4028 38.5562 8.56883C37.7222 7.73487 36.5911 7.26636 35.4117 7.26636C34.2331 7.26636 33.1027 7.73427 32.2689 8.56722ZM39.2633 15.5649L39.9704 16.272C41.1794 15.0629 41.8587 13.4231 41.8587 11.7133C41.8587 10.0035 41.1794 8.36365 39.9704 7.15462C38.7614 5.94559 37.1216 5.26636 35.4117 5.26636C33.7019 5.26636 32.0621 5.94559 30.853 7.15461L30.8499 7.15774C30.0518 7.96296 29.5111 9.09639 29.1311 10.2396C29.0855 10.3767 29.0418 10.5154 28.9999 10.6551C28.958 10.5154 28.9143 10.3767 28.8688 10.2396C28.4888 9.09639 27.9481 7.96296 27.1499 7.15774L27.1468 7.15462C25.9378 5.94559 24.298 5.26636 22.5882 5.26636C20.8783 5.26636 19.2385 5.94559 18.0295 7.15462C16.8205 8.36366 16.1412 10.0035 16.1412 11.7133C16.1412 13.4231 16.8205 15.0629 18.0295 16.272L18.7366 15.5649L18.0326 16.2751C18.3589 16.5985 18.7391 16.8797 19.152 17.125H9.0625C7.5092 17.125 6.25 18.3842 6.25 19.9375V27.1875C6.25 28.7408 7.5092 30 9.0625 30H9.875V45.3125C9.875 46.0584 10.1713 46.7738 10.6988 47.3012C11.2262 47.8287 11.9416 48.125 12.6875 48.125H29H45.3125C46.0584 48.125 46.7738 47.8287 47.3012 47.3012C47.8287 46.7738 48.125 46.0584 48.125 45.3125V30H48.9375C50.4908 30 51.75 28.7408 51.75 27.1875V19.9375C51.75 18.3842 50.4908 17.125 48.9375 17.125H38.8479C39.2608 16.8797 39.641 16.5985 39.9673 16.2751L39.2633 15.5649ZM9.0625 19.125C8.61377 19.125 8.25 19.4888 8.25 19.9375V27.1875C8.25 27.6362 8.61377 28 9.0625 28H10.875H28V19.125H9.0625ZM30 19.125V28H47.125H48.9375C49.3862 28 49.75 27.6362 49.75 27.1875V19.9375C49.75 19.4888 49.3862 19.125 48.9375 19.125H30ZM28 30H11.875V45.3125C11.875 45.528 11.9606 45.7347 12.113 45.887C12.2653 46.0394 12.472 46.125 12.6875 46.125H28V30ZM30 46.125V30H46.125V45.3125C46.125 45.528 46.0394 45.7347 45.887 45.887C45.7347 46.0394 45.528 46.125 45.3125 46.125H30ZM21.7452 16.096C20.723 15.7562 19.9284 15.3374 19.4421 14.8562C18.6091 14.0223 18.1412 12.8919 18.1412 11.7133C18.1412 10.5339 18.6097 9.4028 19.4437 8.56883C20.2777 7.73487 21.4088 7.26636 22.5882 7.26636C23.7668 7.26636 24.8972 7.73428 25.731 8.56725C26.2123 9.05357 26.6311 9.84816 26.9708 10.8704C27.3053 11.8767 27.5346 13.0152 27.6899 14.1032C27.8445 15.1872 27.9223 16.197 27.9613 16.9371C27.9641 16.991 27.9667 17.0434 27.9691 17.0943C27.9183 17.0918 27.8659 17.0892 27.812 17.0864C27.0719 17.0475 26.0621 16.9697 24.978 16.815C23.89 16.6598 22.7516 16.4304 21.7452 16.096Z"
+                        fill="currentColor"
+                      ></path>
+                      <path
+                        fill-rule="evenodd"
+                        clip-rule="evenodd"
+                        d="M32.2689 8.56722C31.7876 9.05354 31.3688 9.84814 31.029 10.8704C30.6946 11.8767 30.4652 13.0152 30.31 14.1032C30.1553 15.1872 30.0776 16.197 30.0386 16.9371C30.0358 16.991 30.0332 17.0434 30.0307 17.0943C30.0816 17.0918 30.134 17.0892 30.1879 17.0864C30.928 17.0475 31.9378 16.9697 33.0218 16.815C34.1098 16.6598 35.2483 16.4304 36.2546 16.096C37.2769 15.7562 38.0715 15.3374 38.5578 14.8561C39.3907 14.0223 39.8587 12.8919 39.8587 11.7133C39.8587 10.5339 39.3901 9.4028 38.5562 8.56883C37.7222 7.73487 36.5911 7.26636 35.4117 7.26636C34.2331 7.26636 33.1027 7.73427 32.2689 8.56722ZM39.2633 15.5649L39.9704 16.272C41.1794 15.0629 41.8587 13.4231 41.8587 11.7133C41.8587 10.0035 41.1794 8.36365 39.9704 7.15462C38.7614 5.94559 37.1216 5.26636 35.4117 5.26636C33.7019 5.26636 32.0621 5.94559 30.853 7.15461L30.8499 7.15774C30.0518 7.96296 29.5111 9.09639 29.1311 10.2396C29.0855 10.3767 29.0418 10.5154 28.9999 10.6551C28.958 10.5154 28.9143 10.3767 28.8688 10.2396C28.4888 9.09639 27.9481 7.96296 27.1499 7.15774L27.1468 7.15462C25.9378 5.94559 24.298 5.26636 22.5882 5.26636C20.8783 5.26636 19.2385 5.94559 18.0295 7.15462C16.8205 8.36366 16.1412 10.0035 16.1412 11.7133C16.1412 13.4231 16.8205 15.0629 18.0295 16.272L18.7366 15.5649L18.0326 16.2751C18.3589 16.5985 18.7391 16.8797 19.152 17.125H9.0625C7.5092 17.125 6.25 18.3842 6.25 19.9375V27.1875C6.25 28.7408 7.5092 30 9.0625 30H9.875V45.3125C9.875 46.0584 10.1713 46.7738 10.6988 47.3012C11.2262 47.8287 11.9416 48.125 12.6875 48.125H29H45.3125C46.0584 48.125 46.7738 47.8287 47.3012 47.3012C47.8287 46.7738 48.125 46.0584 48.125 45.3125V30H48.9375C50.4908 30 51.75 28.7408 51.75 27.1875V19.9375C51.75 18.3842 50.4908 17.125 48.9375 17.125H38.8479C39.2608 16.8797 39.641 16.5985 39.9673 16.2751L39.2633 15.5649ZM9.0625 19.125C8.61377 19.125 8.25 19.4888 8.25 19.9375V27.1875C8.25 27.6362 8.61377 28 9.0625 28H10.875H28V19.125H9.0625ZM30 19.125V28H47.125H48.9375C49.3862 28 49.75 27.6362 49.75 27.1875V19.9375C49.75 19.4888 49.3862 19.125 48.9375 19.125H30ZM28 30H11.875V45.3125C11.875 45.528 11.9606 45.7347 12.113 45.887C12.2653 46.0394 12.472 46.125 12.6875 46.125H28V30ZM30 46.125V30H46.125V45.3125C46.125 45.528 46.0394 45.7347 45.887 45.887C45.7347 46.0394 45.528 46.125 45.3125 46.125H30ZM21.7452 16.096C20.723 15.7562 19.9284 15.3374 19.4421 14.8562C18.6091 14.0223 18.1412 12.8919 18.1412 11.7133C18.1412 10.5339 18.6097 9.4028 19.4437 8.56883C20.2777 7.73487 21.4088 7.26636 22.5882 7.26636C23.7668 7.26636 24.8972 7.73428 25.731 8.56725C26.2123 9.05357 26.6311 9.84816 26.9708 10.8704C27.3053 11.8767 27.5346 13.0152 27.6899 14.1032C27.8445 15.1872 27.9223 16.197 27.9613 16.9371C27.9641 16.991 27.9667 17.0434 27.9691 17.0943C27.9183 17.0918 27.8659 17.0892 27.812 17.0864C27.0719 17.0475 26.0621 16.9697 24.978 16.815C23.89 16.6598 22.7516 16.4304 21.7452 16.096Z"
+                        fill="white"
+                        fill-opacity="0.2"
+                      ></path>
+                      <g opacity="0.2">
+                        <path
+                          d="M47.125 29V45.3125C47.125 45.7932 46.934 46.2542 46.5941 46.5941C46.2542 46.934 45.7932 47.125 45.3125 47.125H12.6875C12.2068 47.125 11.7458 46.934 11.4059 46.5941C11.066 46.2542 10.875 45.7932 10.875 45.3125V29H47.125Z"
+                          fill="currentColor"
+                        ></path>
+                        <path
+                          d="M47.125 29V45.3125C47.125 45.7932 46.934 46.2542 46.5941 46.5941C46.2542 46.934 45.7932 47.125 45.3125 47.125H12.6875C12.2068 47.125 11.7458 46.934 11.4059 46.5941C11.066 46.2542 10.875 45.7932 10.875 45.3125V29H47.125Z"
+                          fill="white"
+                          fill-opacity="0.2"
+                        ></path>
+                      </g>
+                    </svg>
+                    <h5 class="my-3">First Steps</h5>
+                    <p class="mb-3">
+                      Are you a new customer wondering how to get started?
                     </p>
-                    <div class="text-warning mb-4">
-                      <i class="icon-base ri ri-star-fill icon-24px"></i>
-                      <i class="icon-base ri ri-star-fill icon-24px"></i>
-                      <i class="icon-base ri ri-star-fill icon-24px"></i>
-                      <i class="icon-base ri ri-star-fill icon-24px"></i>
-                      <i class="icon-base ri ri-star-fill icon-24px"></i>
-                    </div>
-                    <div>
-                      <h6 class="mb-1">Eugenia Moore</h6>
-                      <p class="mb-0 small">Founder of Hubspot</p>
-                    </div>
+                    <a
+                      class="btn btn-outline-primary"
+                      href="help-center-article.html"
+                      >Read More</a
+                    >
                   </div>
                 </div>
               </div>
-              <div class="swiper-slide">
-                <div class="card h-100">
-                  <div
-                    class="card-body text-body d-flex flex-column justify-content-between text-center p-lg-8"
-                  >
-                    <div class="mb-4">
-                      <img
-                        src="/public/img/front-pages/branding/logo-1.png"
-                        alt="client logo"
-                        class="client-logo img-fluid"
-                      />
-                    </div>
-                    <p class="text-heading">
-                      Materio is awesome, and I particularly enjoy knowing that
-                      if I get stuck on something.
-                    </p>
-                    <div class="text-warning mb-4">
-                      <i class="icon-base ri ri-star-fill icon-24px"></i>
-                      <i class="icon-base ri ri-star-fill icon-24px"></i>
-                      <i class="icon-base ri ri-star-fill icon-24px"></i>
-                      <i class="icon-base ri ri-star-fill icon-24px"></i>
-                      <i class="icon-base ri ri-star-fill icon-24px"></i>
-                    </div>
-                    <div>
-                      <h6 class="mb-1">Tommy haffman</h6>
-                      <p class="mb-0 small">Founder of Levis</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="swiper-slide">
-                <div class="card h-100">
-                  <div
-                    class="card-body text-body d-flex flex-column justify-content-between text-center p-lg-8"
-                  >
-                    <div class="mb-4">
-                      <img
-                        src="/public/img/front-pages/branding/logo-3.png"
-                        alt="client logo"
-                        class="client-logo img-fluid"
-                      />
-                    </div>
-                    <p class="text-heading">
-                      This template is superior in so many ways. The code, the
-                      design, the regular updates, the support.. It’s the whole
-                      package. Excellent Work.
-                    </p>
-                    <div class="text-warning mb-4">
-                      <i class="icon-base ri ri-star-fill icon-24px"></i>
-                      <i class="icon-base ri ri-star-fill icon-24px"></i>
-                      <i class="icon-base ri ri-star-fill icon-24px"></i>
-                      <i class="icon-base ri ri-star-fill icon-24px"></i>
-                      <i class="icon-base ri ri-star-fill icon-24px"></i>
-                    </div>
-                    <div>
-                      <h6 class="mb-1">Eugenia Moore</h6>
-                      <p class="mb-0 small">CTO of Airbnb</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="swiper-slide">
-                <div class="card h-100">
-                  <div
-                    class="card-body text-body d-flex flex-column justify-content-between text-center p-lg-8"
-                  >
-                    <div class="mb-4">
-                      <img
-                        src="/public/img/front-pages/branding/logo-2.png"
-                        alt="client logo"
-                        class="client-logo img-fluid"
-                      />
-                    </div>
-                    <p class="text-heading">
-                      All the requirements for developers have been taken into
-                      consideration, so I’m able to build any interface I want.
-                    </p>
-                    <div class="text-warning mb-4">
-                      <i class="icon-base ri ri-star-fill icon-24px"></i>
-                      <i class="icon-base ri ri-star-fill icon-24px"></i>
-                      <i class="icon-base ri ri-star-fill icon-24px"></i>
-                      <i class="icon-base ri ri-star-fill icon-24px"></i>
-                      <i class="icon-base ri ri-star-fill icon-24px"></i>
-                    </div>
-                    <div>
-                      <h6 class="mb-1">Sara Smith</h6>
-                      <p class="mb-0 small">Founder of Continental</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="swiper-slide">
-                <div class="card h-100">
-                  <div
-                    class="card-body text-body d-flex flex-column justify-content-between text-center p-lg-8"
-                  >
-                    <div class="mb-4">
-                      <img
-                        src="/public/img/front-pages/branding/logo-5.png"
-                        alt="client logo"
-                        class="client-logo img-fluid"
-                      />
-                    </div>
-                    <p class="text-heading">
-                      “I've never used a theme as versatile and flexible as
-                      Vuexy. It's my go to for building dashboard sites on
-                      almost any project.”
-                    </p>
-                    <div class="text-warning mb-4">
-                      <i class="icon-base ri ri-star-fill icon-24px"></i>
-                      <i class="icon-base ri ri-star-fill icon-24px"></i>
-                      <i class="icon-base ri ri-star-fill icon-24px"></i>
-                      <i class="icon-base ri ri-star-fill icon-24px"></i>
-                      <i class="icon-base ri ri-star-fill icon-24px"></i>
-                    </div>
-                    <div>
-                      <h6 class="mb-1">Eugenia Moore</h6>
-                      <p class="mb-0 small">Founder of Hubspot</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="swiper-slide">
-                <div class="card h-100">
-                  <div
-                    class="card-body text-body d-flex flex-column justify-content-between text-center h-100"
-                  >
-                    <div class="mb-4">
-                      <img
-                        src="/public/img/front-pages/branding/logo-4.png"
-                        alt="client logo"
-                        class="client-logo img-fluid"
-                      />
-                    </div>
-                    <p class="text-heading">
-                      “I've never used a theme as versatile and flexible as
-                      Vuexy. It's my go to for building dashboard sites on
-                      almost any project.”
-                    </p>
-                    <div class="text-warning mb-4">
-                      <i class="icon-base ri ri-star-fill icon-24px"></i>
-                      <i class="icon-base ri ri-star-fill icon-24px"></i>
-                      <i class="icon-base ri ri-star-fill icon-24px"></i>
-                      <i class="icon-base ri ri-star-fill icon-24px"></i>
-                      <i class="icon-base ri ri-star-line icon-24px"></i>
-                    </div>
-                    <div>
-                      <h6 class="mb-1">Eugenia Moore</h6>
-                      <p class="mb-0 small">Founder of Hubspot</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="swiper-slide">
-                <div class="card h-100">
-                  <div
-                    class="card-body text-body d-flex flex-column justify-content-between text-center h-100"
-                  >
-                    <div class="mb-4">
-                      <img
-                        src="/public/img/front-pages/branding/logo-1.png"
-                        alt="client logo"
-                        class="client-logo img-fluid"
-                      />
-                    </div>
-                    <p class="text-heading">
-                      Materio is awesome, and I particularly enjoy knowing that
-                      if I get stuck on something.
-                    </p>
-                    <div class="text-warning mb-4">
-                      <i class="icon-base ri ri-star-fill icon-24px"></i>
-                      <i class="icon-base ri ri-star-fill icon-24px"></i>
-                      <i class="icon-base ri ri-star-fill icon-24px"></i>
-                      <i class="icon-base ri ri-star-fill icon-24px"></i>
-                      <i class="icon-base ri ri-star-fill icon-24px"></i>
-                    </div>
-                    <div>
-                      <h6 class="mb-1">Tommy haffman</h6>
-                      <p class="mb-0 small">Founder of Levis</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="swiper-slide">
-                <div class="card h-100">
-                  <div
-                    class="card-body text-body d-flex flex-column justify-content-between text-center h-100"
-                  >
-                    <div class="mb-4">
-                      <img
-                        src="/public/img/front-pages/branding/logo-3.png"
-                        alt="client logo"
-                        class="client-logo img-fluid"
-                      />
-                    </div>
-                    <p class="text-heading">
-                      This template is superior in so many ways. The code, the
-                      design, the regular updates, the support.. It’s the whole
-                      package. Excellent Work.
-                    </p>
-                    <div class="text-warning mb-4">
-                      <i class="icon-base ri ri-star-fill icon-24px"></i>
-                      <i class="icon-base ri ri-star-fill icon-24px"></i>
-                      <i class="icon-base ri ri-star-fill icon-24px"></i>
-                      <i class="icon-base ri ri-star-fill icon-24px"></i>
-                      <i class="icon-base ri ri-star-fill icon-24px"></i>
-                    </div>
-                    <div>
-                      <h6 class="mb-1">Eugenia Moore</h6>
-                      <p class="mb-0 small">CTO of Airbnb</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="swiper-slide">
-                <div class="card h-100">
-                  <div
-                    class="card-body text-body d-flex flex-column justify-content-between text-center h-100"
-                  >
-                    <div class="mb-4">
-                      <img
-                        src="/public/img/front-pages/branding/logo-2.png"
-                        alt="client logo"
-                        class="client-logo img-fluid"
-                      />
-                    </div>
-                    <p class="text-heading">
-                      All the requirements for developers have been taken into
-                      consideration, so I’m able to build any interface I want.
-                    </p>
-                    <div class="text-warning mb-4">
-                      <i class="icon-base ri ri-star-fill icon-24px"></i>
-                      <i class="icon-base ri ri-star-fill icon-24px"></i>
-                      <i class="icon-base ri ri-star-fill icon-24px"></i>
-                      <i class="icon-base ri ri-star-fill icon-24px"></i>
-                      <i class="icon-base ri ri-star-line icon-24px"></i>
-                    </div>
-                    <div>
-                      <h6 class="mb-1">Sara Smith</h6>
-                      <p class="mb-0 small">Founder of Continental</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="swiper-slide">
-                <div class="card h-100">
-                  <div
-                    class="card-body text-body d-flex flex-column justify-content-between text-center h-100"
-                  >
-                    <div class="mb-4">
-                      <img
-                        src="/public/img/front-pages/branding/logo-5.png"
-                        alt="client logo"
-                        class="client-logo img-fluid"
-                      />
-                    </div>
-                    <p class="text-heading">
-                      “I've never used a theme as versatile and flexible as
-                      Vuexy. It's my go to for building dashboard sites on
-                      almost any project.”
-                    </p>
-                    <div class="text-warning mb-4">
-                      <i class="icon-base ri ri-star-fill icon-24px"></i>
-                      <i class="icon-base ri ri-star-fill icon-24px"></i>
-                      <i class="icon-base ri ri-star-fill icon-24px"></i>
-                      <i class="icon-base ri ri-star-fill icon-24px"></i>
-                      <i class="icon-base ri ri-star-fill icon-24px"></i>
-                    </div>
-                    <div>
-                      <h6 class="mb-1">Eugenia Moore</h6>
-                      <p class="mb-0 small">Founder of Hubspot</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="swiper-slide">
-                <div class="card h-100">
-                  <div
-                    class="card-body text-body d-flex flex-column justify-content-between text-center p-lg-8"
-                  >
-                    <div class="mb-4">
-                      <img
-                        src="/public/img/front-pages/branding/logo-4.png"
-                        alt="client logo"
-                        class="client-logo img-fluid"
-                      />
-                    </div>
-                    <p class="text-heading">
-                      “I've never used a theme as versatile and flexible as
-                      Vuexy. It's my go to for building dashboard sites on
-                      almost any project.”
-                    </p>
-                    <div class="text-warning mb-4">
-                      <i class="icon-base ri ri-star-fill icon-24px"></i>
-                      <i class="icon-base ri ri-star-fill icon-24px"></i>
-                      <i class="icon-base ri ri-star-fill icon-24px"></i>
-                      <i class="icon-base ri ri-star-fill icon-24px"></i>
-                      <i class="icon-base ri ri-star-fill icon-24px"></i>
-                    </div>
-                    <div>
-                      <h6 class="mb-1">Eugenia Moore</h6>
-                      <p class="mb-0 small">Founder of Hubspot</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="swiper-slide">
-                <div class="card h-100">
-                  <div
-                    class="card-body text-body d-flex flex-column justify-content-between text-center p-lg-8"
-                  >
-                    <div class="mb-4">
-                      <img
-                        src="/public/img/front-pages/branding/logo-1.png"
-                        alt="client logo"
-                        class="client-logo img-fluid"
-                      />
-                    </div>
-                    <p class="text-heading">
-                      Materio is awesome, and I particularly enjoy knowing that
-                      if I get stuck on something.
-                    </p>
-                    <div class="text-warning mb-4">
-                      <i class="icon-base ri ri-star-fill icon-24px"></i>
-                      <i class="icon-base ri ri-star-fill icon-24px"></i>
-                      <i class="icon-base ri ri-star-fill icon-24px"></i>
-                      <i class="icon-base ri ri-star-fill icon-24px"></i>
-                      <i class="icon-base ri ri-star-fill icon-24px"></i>
-                    </div>
-                    <div>
-                      <h6 class="mb-1">Tommy haffman</h6>
-                      <p class="mb-0 small">Founder of Levis</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="swiper-slide">
-                <div class="card h-100">
-                  <div
-                    class="card-body text-body d-flex flex-column justify-content-between text-center p-lg-8"
-                  >
-                    <div class="mb-4">
-                      <img
-                        src="/public/img/front-pages/branding/logo-3.png"
-                        alt="client logo"
-                        class="client-logo img-fluid"
-                      />
-                    </div>
-                    <p class="text-heading">
-                      This template is superior in so many ways. The code, the
-                      design, the regular updates, the support.. It’s the whole
-                      package. Excellent Work.
-                    </p>
-                    <div class="text-warning mb-4">
-                      <i class="icon-base ri ri-star-fill icon-24px"></i>
-                      <i class="icon-base ri ri-star-fill icon-24px"></i>
-                      <i class="icon-base ri ri-star-fill icon-24px"></i>
-                      <i class="icon-base ri ri-star-fill icon-24px"></i>
-                      <i class="icon-base ri ri-star-fill icon-24px"></i>
-                    </div>
-                    <div>
-                      <h6 class="mb-1">Eugenia Moore</h6>
-                      <p class="mb-0 small">CTO of Airbnb</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="swiper-slide">
-                <div class="card h-100">
-                  <div
-                    class="card-body text-body d-flex flex-column justify-content-between text-center p-lg-8"
-                  >
-                    <div class="mb-4">
-                      <img
-                        src="/public/img/front-pages/branding/logo-2.png"
-                        alt="client logo"
-                        class="client-logo img-fluid"
-                      />
-                    </div>
-                    <p class="text-heading">
-                      All the requirements for developers have been taken into
-                      consideration, so I’m able to build any interface I want.
-                    </p>
-                    <div class="text-warning mb-4">
-                      <i class="icon-base ri ri-star-fill icon-24px"></i>
-                      <i class="icon-base ri ri-star-fill icon-24px"></i>
-                      <i class="icon-base ri ri-star-fill icon-24px"></i>
-                      <i class="icon-base ri ri-star-fill icon-24px"></i>
-                      <i class="icon-base ri ri-star-fill icon-24px"></i>
-                    </div>
-                    <div>
-                      <h6 class="mb-1">Sara Smith</h6>
-                      <p class="mb-0 small">Founder of Continental</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="swiper-slide">
-                <div class="card h-100">
-                  <div
-                    class="card-body text-body d-flex flex-column justify-content-between text-center p-lg-8"
-                  >
-                    <div class="mb-4">
-                      <img
-                        src="/public/img/front-pages/branding/logo-5.png"
-                        alt="client logo"
-                        class="client-logo img-fluid"
-                      />
-                    </div>
-                    <p class="text-heading">
-                      “I've never used a theme as versatile and flexible as
-                      Vuexy. It's my go to for building dashboard sites on
-                      almost any project.”
-                    </p>
-                    <div class="text-warning mb-4">
-                      <i class="icon-base ri ri-star-fill icon-24px"></i>
-                      <i class="icon-base ri ri-star-fill icon-24px"></i>
-                      <i class="icon-base ri ri-star-fill icon-24px"></i>
-                      <i class="icon-base ri ri-star-fill icon-24px"></i>
-                      <i class="icon-base ri ri-star-fill icon-24px"></i>
-                    </div>
-                    <div>
-                      <h6 class="mb-1">Eugenia Moore</h6>
-                      <p class="mb-0 small">Founder of Hubspot</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="swiper-pagination"></div>
-          </div>
-        </div>
-        <div class="container">
-          <div class="swiper-logo-carousel pt-lg-4 mt-12">
-            <div class="swiper" id="swiper-clients-logos">
-              <div class="swiper-wrapper">
-                <div class="swiper-slide">
-                  <img
-                    src="/public/img/front-pages/branding/logo-1-light.png"
-                    alt="client logo"
-                    class="client-logo"
-                    data-app-light-img="front-pages/branding/logo-1-light.png"
-                    data-app-dark-img="front-pages/branding/logo-1-dark.png"
-                  />
-                </div>
-                <div class="swiper-slide">
-                  <img
-                    src="/public/img/front-pages/branding/logo-2-light.png"
-                    alt="client logo"
-                    class="client-logo"
-                    data-app-light-img="front-pages/branding/logo-2-light.png"
-                    data-app-dark-img="front-pages/branding/logo-2-dark.png"
-                  />
-                </div>
-                <div class="swiper-slide">
-                  <img
-                    src="/public/img/front-pages/branding/logo-3-light.png"
-                    alt="client logo"
-                    class="client-logo"
-                    data-app-light-img="front-pages/branding/logo-3-light.png"
-                    data-app-dark-img="front-pages/branding/logo-3-dark.png"
-                  />
-                </div>
-                <div class="swiper-slide">
-                  <img
-                    src="/public/img/front-pages/branding/logo-4-light.png"
-                    alt="client logo"
-                    class="client-logo"
-                    data-app-light-img="front-pages/branding/logo-4-light.png"
-                    data-app-dark-img="front-pages/branding/logo-4-dark.png"
-                  />
-                </div>
-                <div class="swiper-slide">
-                  <img
-                    src="/public/img/front-pages/branding/logo-5-light.png"
-                    alt="client logo"
-                    class="client-logo"
-                    data-app-light-img="front-pages/branding/logo-5-light.png"
-                    data-app-dark-img="front-pages/branding/logo-5-dark.png"
-                  />
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <!-- Real customers reviews: End -->
 
-      <!-- Our great team: Start -->
-      <section id="landingTeam" class="section-py landing-team">
-        <div class="container bg-icon-right position-relative">
-          <img
-            src="/public/img/front-pages/icons/bg-right-icon-light.png"
-            alt="section icon"
-            class="position-absolute top-0 end-0"
-            data-speed="1"
-            data-app-light-img="front-pages/icons/bg-right-icon-light.png"
-            data-app-dark-img="front-pages/icons/bg-right-icon-dark.png"
-          />
-          <h6
-            class="text-center d-flex justify-content-center align-items-center mb-6"
-          >
-            <img
-              src="/public/img/front-pages/icons/section-title-icon.png"
-              alt="section title icon"
-              class="me-3"
-              height="19"
-            />
-            <span class="text-uppercase">our great team</span>
-          </h6>
-          <h5 class="text-center mb-2">
-            <span class="h4 fw-bold">Supported</span> by Real People
-          </h5>
-          <p class="text-center fw-medium mb-4 mb-md-12 pb-7">
-            Who is behind these great-looking interfaces?
-          </p>
-          <div class="row gy-lg-5 gy-12 mt-2">
-            <div class="col-lg-3 col-sm-6">
-              <div
-                class="card card-hover-border-primary mt-4 mt-lg-0 shadow-none"
-              >
-                <div class="bg-label-primary position-relative team-image-box">
-                  <img
-                    src="/public/img/front-pages/landing-page/team-member-1.png"
-                    class="position-absolute card-img-position bottom-0 start-50 scaleX-n1-rtl"
-                    alt="human image"
-                  />
-                </div>
-                <div class="card-body text-center">
-                  <h5 class="card-title mb-0">Sophie Gilbert</h5>
-                  <p class="card-text mb-3">Project Manager</p>
-                  <div class="text-center team-media-icons">
-                    <a
-                      href="javascript:void(0);"
-                      class="text-heading"
-                      target="_blank"
+              <div class="col-md-4">
+                <div class="card border shadow-none">
+                  <div class="card-body text-center">
+                    <svg
+                      width="58"
+                      height="58"
+                      viewBox="0 0 58 58"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
                     >
-                      <i
-                        class="icon-base ri ri-facebook-circle-line icon-22px me-2"
-                      ></i>
-                    </a>
+                      <g opacity="0.2">
+                        <path
+                          d="M50.9702 12.6875H7.69678C6.6332 12.6875 5.771 13.5497 5.771 14.6133V43.3867C5.771 44.4503 6.6332 45.3125 7.69678 45.3125H50.9702C52.0338 45.3125 52.896 44.4503 52.896 43.3867V14.6133C52.896 13.5497 52.0338 12.6875 50.9702 12.6875Z"
+                          fill="currentColor"
+                        ></path>
+                        <path
+                          d="M50.9702 12.6875H7.69678C6.6332 12.6875 5.771 13.5497 5.771 14.6133V43.3867C5.771 44.4503 6.6332 45.3125 7.69678 45.3125H50.9702C52.0338 45.3125 52.896 44.4503 52.896 43.3867V14.6133C52.896 13.5497 52.0338 12.6875 50.9702 12.6875Z"
+                          fill="white"
+                          fill-opacity="0.2"
+                        ></path>
+                      </g>
+                      <path
+                        fill-rule="evenodd"
+                        clip-rule="evenodd"
+                        d="M7.021 14.6133C7.021 14.2401 7.32355 13.9375 7.69678 13.9375H50.9702C51.3434 13.9375 51.646 14.2401 51.646 14.6133V43.3867C51.646 43.7599 51.3434 44.0625 50.9702 44.0625H7.69678C7.32355 44.0625 7.021 43.7599 7.021 43.3867V14.6133ZM7.69678 11.4375C5.94284 11.4375 4.521 12.8593 4.521 14.6133V43.3867C4.521 45.1407 5.94284 46.5625 7.69678 46.5625H50.9702C52.7242 46.5625 54.146 45.1407 54.146 43.3867V14.6133C54.146 12.8593 52.7242 11.4375 50.9702 11.4375H7.69678ZM13.021 20.75C12.4687 20.75 12.021 21.1977 12.021 21.75C12.021 22.3023 12.4687 22.75 13.021 22.75H45.646C46.1983 22.75 46.646 22.3023 46.646 21.75C46.646 21.1977 46.1983 20.75 45.646 20.75H13.021ZM13.021 28C12.4687 28 12.021 28.4477 12.021 29C12.021 29.5523 12.4687 30 13.021 30H45.646C46.1983 30 46.646 29.5523 46.646 29C46.646 28.4477 46.1983 28 45.646 28H13.021ZM12.021 36.25C12.021 35.6977 12.4687 35.25 13.021 35.25H14.8335C15.3858 35.25 15.8335 35.6977 15.8335 36.25C15.8335 36.8023 15.3858 37.25 14.8335 37.25H13.021C12.4687 37.25 12.021 36.8023 12.021 36.25ZM22.0835 35.25C21.5312 35.25 21.0835 35.6977 21.0835 36.25C21.0835 36.8023 21.5312 37.25 22.0835 37.25H36.5835C37.1358 37.25 37.5835 36.8023 37.5835 36.25C37.5835 35.6977 37.1358 35.25 36.5835 35.25H22.0835ZM42.8335 36.25C42.8335 35.6977 43.2812 35.25 43.8335 35.25H45.646C46.1983 35.25 46.646 35.6977 46.646 36.25C46.646 36.8023 46.1983 37.25 45.646 37.25H43.8335C43.2812 37.25 42.8335 36.8023 42.8335 36.25Z"
+                        fill="currentColor"
+                      ></path>
+                      <path
+                        fill-rule="evenodd"
+                        clip-rule="evenodd"
+                        d="M7.021 14.6133C7.021 14.2401 7.32355 13.9375 7.69678 13.9375H50.9702C51.3434 13.9375 51.646 14.2401 51.646 14.6133V43.3867C51.646 43.7599 51.3434 44.0625 50.9702 44.0625H7.69678C7.32355 44.0625 7.021 43.7599 7.021 43.3867V14.6133ZM7.69678 11.4375C5.94284 11.4375 4.521 12.8593 4.521 14.6133V43.3867C4.521 45.1407 5.94284 46.5625 7.69678 46.5625H50.9702C52.7242 46.5625 54.146 45.1407 54.146 43.3867V14.6133C54.146 12.8593 52.7242 11.4375 50.9702 11.4375H7.69678ZM13.021 20.75C12.4687 20.75 12.021 21.1977 12.021 21.75C12.021 22.3023 12.4687 22.75 13.021 22.75H45.646C46.1983 22.75 46.646 22.3023 46.646 21.75C46.646 21.1977 46.1983 20.75 45.646 20.75H13.021ZM13.021 28C12.4687 28 12.021 28.4477 12.021 29C12.021 29.5523 12.4687 30 13.021 30H45.646C46.1983 30 46.646 29.5523 46.646 29C46.646 28.4477 46.1983 28 45.646 28H13.021ZM12.021 36.25C12.021 35.6977 12.4687 35.25 13.021 35.25H14.8335C15.3858 35.25 15.8335 35.6977 15.8335 36.25C15.8335 36.8023 15.3858 37.25 14.8335 37.25H13.021C12.4687 37.25 12.021 36.8023 12.021 36.25ZM22.0835 35.25C21.5312 35.25 21.0835 35.6977 21.0835 36.25C21.0835 36.8023 21.5312 37.25 22.0835 37.25H36.5835C37.1358 37.25 37.5835 36.8023 37.5835 36.25C37.5835 35.6977 37.1358 35.25 36.5835 35.25H22.0835ZM42.8335 36.25C42.8335 35.6977 43.2812 35.25 43.8335 35.25H45.646C46.1983 35.25 46.646 35.6977 46.646 36.25C46.646 36.8023 46.1983 37.25 45.646 37.25H43.8335C43.2812 37.25 42.8335 36.8023 42.8335 36.25Z"
+                        fill="white"
+                        fill-opacity="0.2"
+                      ></path>
+                    </svg>
+                    <h5 class="my-3">Add External Content</h5>
+                    <p class="mb-3">
+                      This article will show you how to expand the functionality
+                      of...
+                    </p>
                     <a
-                      href="javascript:void(0);"
-                      class="text-heading"
-                      target="_blank"
+                      class="btn btn-outline-primary"
+                      href="help-center-article.html"
+                      >Read More</a
                     >
-                      <i
-                        class="icon-base ri ri-twitter-line icon-22px me-2"
-                      ></i>
-                    </a>
-                    <a
-                      href="javascript:void(0);"
-                      class="text-heading"
-                      target="_blank"
-                    >
-                      <i
-                        class="icon-base ri ri-linkedin-box-line icon-22px"
-                      ></i>
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-lg-3 col-sm-6">
-              <div
-                class="card card-hover-border-danger mt-4 mt-lg-0 shadow-none"
-              >
-                <div class="bg-label-danger position-relative team-image-box">
-                  <img
-                    src="/public/img/front-pages/landing-page/team-member-2.png"
-                    class="position-absolute card-img-position bottom-0 start-50 scaleX-n1-rtl"
-                    alt="human image"
-                  />
-                </div>
-                <div class="card-body text-center">
-                  <h5 class="card-title mb-0">Nannie Ford</h5>
-                  <p class="card-text mb-3">Development Lead</p>
-                  <div class="text-center team-media-icons">
-                    <a
-                      href="javascript:void(0);"
-                      class="text-heading"
-                      target="_blank"
-                    >
-                      <i
-                        class="icon-base ri ri-facebook-circle-line icon-22px me-2"
-                      ></i>
-                    </a>
-                    <a
-                      href="javascript:void(0);"
-                      class="text-heading"
-                      target="_blank"
-                    >
-                      <i
-                        class="icon-base ri ri-twitter-line icon-22px me-2"
-                      ></i>
-                    </a>
-                    <a
-                      href="javascript:void(0);"
-                      class="text-heading"
-                      target="_blank"
-                    >
-                      <i
-                        class="icon-base ri ri-linkedin-box-line icon-22px"
-                      ></i>
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-lg-3 col-sm-6">
-              <div
-                class="card card-hover-border-success mt-4 mt-lg-0 shadow-none"
-              >
-                <div class="bg-label-success position-relative team-image-box">
-                  <img
-                    src="/public/img/front-pages/landing-page/team-member-3.png"
-                    class="position-absolute card-img-position bottom-0 start-50 scaleX-n1-rtl"
-                    alt="human image"
-                  />
-                </div>
-                <div class="card-body text-center">
-                  <h5 class="card-title mb-0">Chris Watkins</h5>
-                  <p class="card-text mb-3">Marketing Manager</p>
-                  <div class="text-center team-media-icons">
-                    <a
-                      href="javascript:void(0);"
-                      class="text-heading"
-                      target="_blank"
-                    >
-                      <i
-                        class="icon-base ri ri-facebook-circle-line icon-22px me-2"
-                      ></i>
-                    </a>
-                    <a
-                      href="javascript:void(0);"
-                      class="text-heading"
-                      target="_blank"
-                    >
-                      <i
-                        class="icon-base ri ri-twitter-line icon-22px me-2"
-                      ></i>
-                    </a>
-                    <a
-                      href="javascript:void(0);"
-                      class="text-heading"
-                      target="_blank"
-                    >
-                      <i
-                        class="icon-base ri ri-linkedin-box-line icon-22px"
-                      ></i>
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-lg-3 col-sm-6">
-              <div class="card card-hover-border-info mt-4 mt-lg-0 shadow-none">
-                <div class="bg-label-info position-relative team-image-box">
-                  <img
-                    src="/public/img/front-pages/landing-page/team-member-4.png"
-                    class="position-absolute card-img-position bottom-0 start-50 scaleX-n1-rtl"
-                    alt="human image"
-                  />
-                </div>
-                <div class="card-body text-center">
-                  <h5 class="card-title mb-0">Paul Miles</h5>
-                  <p class="card-text mb-3">UI Designer</p>
-                  <div class="text-center team-media-icons">
-                    <a
-                      href="javascript:void(0);"
-                      class="text-heading"
-                      target="_blank"
-                    >
-                      <i
-                        class="icon-base ri ri-facebook-circle-line icon-22px me-2"
-                      ></i>
-                    </a>
-                    <a
-                      href="javascript:void(0);"
-                      class="text-heading"
-                      target="_blank"
-                    >
-                      <i
-                        class="icon-base ri ri-twitter-line icon-22px me-2"
-                      ></i>
-                    </a>
-                    <a
-                      href="javascript:void(0);"
-                      class="text-heading"
-                      target="_blank"
-                    >
-                      <i
-                        class="icon-base ri ri-linkedin-box-line icon-22px"
-                      ></i>
-                    </a>
                   </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
-      </section>
-      <!-- Our great team: End -->
-
-      <!-- Pricing plans: Start -->
-      <section id="landingPricing" class="section-py bg-body landing-pricing">
-        <div class="container bg-icon-left position-relative">
-          <img
-            src="/public/img/front-pages/icons/bg-left-icon-light.png"
-            alt="section icon"
-            class="position-absolute top-0 start-0"
-            data-speed="1"
-            data-app-light-img="front-pages/icons/bg-left-icon-light.png"
-            data-app-dark-img="front-pages/icons/bg-left-icon-dark.png"
-          />
-          <h6
-            class="text-center d-flex justify-content-center align-items-center mb-6"
-          >
-            <img
-              src="/public/img/front-pages/icons/section-title-icon.png"
-              alt="section title icon"
-              class="me-3"
-              height="19"
-            />
-            <span class="text-uppercase">pricing plans</span>
-          </h6>
-          <h5 class="text-center mb-2">
-            <span class="h4 fw-bold">Tailored pricing plans</span> designed for
-            you
-          </h5>
-          <p class="text-center fw-medium mb-10 mb-md-12 pb-lg-4">
-            All plans include 40+ advanced tools and features to boost your
-            product.<br />
-            the best plan to fit your needs.
-          </p>
-          <div id="slider-pricing" class="mb-10 mb-md-12"></div>
-          <div class="row gy-4 pt-lg-4">
-            <!-- Basic Plan: Start -->
-            <div class="col-xl-4 col-lg-6">
-              <div class="card shadow-none">
-                <div class="card-header border-0">
-                  <h4 class="mb-3 text-center">Basic Plan</h4>
-                  <div class="d-flex align-items-center">
-                    <h5 class="d-flex mb-0">
-                      <sup class="h5 mt-4">$</sup
-                      ><span class="display-3 fw-bold">20</span>
-                    </h5>
-                    <div class="ms-2 ps-1">
-                      <h6 class="mb-1">Per month</h6>
-                      <p class="small mb-0 text-body">
-                        10% off for yearly subscription
-                      </p>
-                    </div>
-                  </div>
-                  <img
-                    src="/public/img/front-pages/icons/smiling-icon.png"
-                    alt="smiling icon"
-                  />
-                </div>
-                <div class="card-body">
-                  <ul class="list-unstyled">
-                    <li>
-                      <h5 class="mb-3">
-                        <img
-                          src="/public/img/front-pages/icons/list-arrow-icon.png"
-                          alt="list arrow icon"
-                          class="me-2 pe-1 scaleX-n1-rtl"
-                        />
-                        Timeline
-                      </h5>
-                    </li>
-                    <li>
-                      <h5 class="mb-3">
-                        <img
-                          src="/public/img/front-pages/icons/list-arrow-icon.png"
-                          alt="list arrow icon"
-                          class="me-2 pe-1 scaleX-n1-rtl"
-                        />
-                        Basic search
-                      </h5>
-                    </li>
-                    <li>
-                      <h5 class="mb-3">
-                        <img
-                          src="/public/img/front-pages/icons/list-arrow-icon.png"
-                          alt="list arrow icon"
-                          class="me-2 pe-1 scaleX-n1-rtl"
-                        />
-                        Live chat widget
-                      </h5>
-                    </li>
-                    <li>
-                      <h5 class="mb-3">
-                        <img
-                          src="/public/img/front-pages/icons/list-arrow-icon.png"
-                          alt="list arrow icon"
-                          class="me-2 pe-1 scaleX-n1-rtl"
-                        />
-                        Email marketing
-                      </h5>
-                    </li>
-                    <li>
-                      <h5 class="mb-3">
-                        <img
-                          src="/public/img/front-pages/icons/list-arrow-icon.png"
-                          alt="list arrow icon"
-                          class="me-2 pe-1 scaleX-n1-rtl"
-                        />
-                        Custom Forms
-                      </h5>
-                    </li>
-                    <li>
-                      <h5 class="mb-3">
-                        <img
-                          src="/public/img/front-pages/icons/list-arrow-icon.png"
-                          alt="list arrow icon"
-                          class="me-2 pe-1 scaleX-n1-rtl"
-                        />
-                        Traffic analytics
-                      </h5>
-                    </li>
-                  </ul>
-                  <hr />
-                  <div
-                    class="d-flex justify-content-between align-items-center flex-wrap"
-                  >
-                    <div class="me-1">
-                      <h6 class="mb-1">Basic Support</h6>
-                      <p class="small mb-0 text-body">Only Email</p>
-                    </div>
-                    <span class="badge bg-label-primary rounded-pill"
-                      >AVG. Time: 24h</span
-                    >
-                  </div>
-                  <div class="text-center mt-6 pt-2">
-                    <a
-                      href="payment-page.html"
-                      class="btn btn-outline-primary w-100"
-                      >Get Started</a
-                    >
-                  </div>
-                </div>
-              </div>
-            </div>
-            <!-- Basic Plan: End -->
-
-            <!-- Favourite Plan: Start -->
-            <div class="col-xl-4 col-lg-6">
-              <div class="card border-primary border-2 shadow-none">
-                <div class="card-header border-0">
-                  <h4 class="mb-3 text-center">Favourite Plan</h4>
-                  <div class="d-flex align-items-center">
-                    <h5 class="d-flex mb-0">
-                      <sup class="h5 mt-4">$</sup
-                      ><span class="display-3 fw-bold">51</span>
-                    </h5>
-                    <div class="ms-2 ps-1">
-                      <h6 class="mb-1">Per month</h6>
-                      <p class="small mb-0 text-body">
-                        10% off for yearly subscription
-                      </p>
-                    </div>
-                  </div>
-                  <img
-                    src="/public/img/front-pages/icons/smiling-icon.png"
-                    alt="smiling icon"
-                  />
-                </div>
-                <div class="card-body">
-                  <ul class="list-unstyled">
-                    <li>
-                      <h5 class="mb-3">
-                        <img
-                          src="/public/img/front-pages/icons/list-arrow-icon.png"
-                          alt="list arrow icon"
-                          class="me-2 pe-1 scaleX-n1-rtl"
-                        />
-                        Everything in basic
-                      </h5>
-                    </li>
-                    <li>
-                      <h5 class="mb-3">
-                        <img
-                          src="/public/img/front-pages/icons/list-arrow-icon.png"
-                          alt="list arrow icon"
-                          class="me-2 pe-1 scaleX-n1-rtl"
-                        />
-                        Timeline with database
-                      </h5>
-                    </li>
-                    <li>
-                      <h5 class="mb-3">
-                        <img
-                          src="/public/img/front-pages/icons/list-arrow-icon.png"
-                          alt="list arrow icon"
-                          class="me-2 pe-1 scaleX-n1-rtl"
-                        />
-                        Advanced search
-                      </h5>
-                    </li>
-                    <li>
-                      <h5 class="mb-3">
-                        <img
-                          src="/public/img/front-pages/icons/list-arrow-icon.png"
-                          alt="list arrow icon"
-                          class="me-2 pe-1 scaleX-n1-rtl"
-                        />
-                        Marketing automation
-                      </h5>
-                    </li>
-                    <li>
-                      <h5 class="mb-3">
-                        <img
-                          src="/public/img/front-pages/icons/list-arrow-icon.png"
-                          alt="list arrow icon"
-                          class="me-2 pe-1 scaleX-n1-rtl"
-                        />
-                        Advanced chatbot
-                      </h5>
-                    </li>
-                    <li>
-                      <h5 class="mb-3">
-                        <img
-                          src="/public/img/front-pages/icons/list-arrow-icon.png"
-                          alt="list arrow icon"
-                          class="me-2 pe-1 scaleX-n1-rtl"
-                        />
-                        Campaign management
-                      </h5>
-                    </li>
-                  </ul>
-                  <hr />
-                  <div
-                    class="d-flex justify-content-between align-items-center flex-wrap"
-                  >
-                    <div class="me-1">
-                      <h6 class="mb-1">Standard Support</h6>
-                      <p class="small mb-0 text-body">Email & Chat</p>
-                    </div>
-                    <span class="badge bg-label-primary rounded-pill"
-                      >AVG. Time: 6h</span
-                    >
-                  </div>
-                  <div class="text-center mt-6 pt-2">
-                    <a href="payment-page.html" class="btn btn-primary w-100"
-                      >Get Started</a
-                    >
-                  </div>
-                </div>
-              </div>
-            </div>
-            <!-- Favourite Plan: End -->
-
-            <!-- Standard Plan: Start -->
-            <div class="col-xl-4 col-lg-6">
-              <div class="card shadow-none">
-                <div class="card-header border-0">
-                  <h4 class="mb-3 text-center">Standard Plan</h4>
-                  <div class="d-flex align-items-center">
-                    <h5 class="d-flex mb-0">
-                      <sup class="h5 mt-4">$</sup
-                      ><span class="display-3 fw-bold">99</span>
-                    </h5>
-                    <div class="ms-2 ps-1">
-                      <h6 class="mb-1">Per month</h6>
-                      <p class="small mb-0 text-body">
-                        10% off for yearly subscription
-                      </p>
-                    </div>
-                  </div>
-                  <img
-                    src="/public/img/front-pages/icons/smiling-icon.png"
-                    alt="smiling icon"
-                  />
-                </div>
-                <div class="card-body">
-                  <ul class="list-unstyled">
-                    <li>
-                      <h5 class="mb-3">
-                        <img
-                          src="/public/img/front-pages/icons/list-arrow-icon.png"
-                          alt="list arrow icon"
-                          class="me-2 pe-1 scaleX-n1-rtl"
-                        />
-                        Everything in premium
-                      </h5>
-                    </li>
-                    <li>
-                      <h5 class="mb-3">
-                        <img
-                          src="/public/img/front-pages/icons/list-arrow-icon.png"
-                          alt="list arrow icon"
-                          class="me-2 pe-1 scaleX-n1-rtl"
-                        />
-                        Timeline with database
-                      </h5>
-                    </li>
-                    <li>
-                      <h5 class="mb-3">
-                        <img
-                          src="/public/img/front-pages/icons/list-arrow-icon.png"
-                          alt="list arrow icon"
-                          class="me-2 pe-1 scaleX-n1-rtl"
-                        />
-                        Fuzzy search
-                      </h5>
-                    </li>
-                    <li>
-                      <h5 class="mb-3">
-                        <img
-                          src="/public/img/front-pages/icons/list-arrow-icon.png"
-                          alt="list arrow icon"
-                          class="me-2 pe-1 scaleX-n1-rtl"
-                        />
-                        A/B testing sanbox
-                      </h5>
-                    </li>
-                    <li>
-                      <h5 class="mb-3">
-                        <img
-                          src="/public/img/front-pages/icons/list-arrow-icon.png"
-                          alt="list arrow icon"
-                          class="me-2 pe-1 scaleX-n1-rtl"
-                        />
-                        Custom permissions
-                      </h5>
-                    </li>
-                    <li>
-                      <h5 class="mb-3">
-                        <img
-                          src="/public/img/front-pages/icons/list-arrow-icon.png"
-                          alt="list arrow icon"
-                          class="me-2 pe-1 scaleX-n1-rtl"
-                        />
-                        Social media automation
-                      </h5>
-                    </li>
-                  </ul>
-                  <hr />
-                  <div
-                    class="d-flex justify-content-between align-items-center flex-wrap"
-                  >
-                    <div class="me-1">
-                      <h6 class="mb-1">Exclusive Support</h6>
-                      <p class="small mb-0 text-body">
-                        Email, Chat & Google Meet
-                      </p>
-                    </div>
-                    <span class="badge bg-label-primary rounded-pill"
-                      >Live Support</span
-                    >
-                  </div>
-                  <div class="text-center mt-6 pt-2">
-                    <a
-                      href="payment-page.html"
-                      class="btn btn-outline-primary w-100"
-                      >Get Started</a
-                    >
-                  </div>
-                </div>
-              </div>
-            </div>
-            <!-- Standard Plan: End -->
-          </div>
-        </div>
-      </section>
-      <!-- Pricing plans: End -->
-
-      <!-- Fun facts: Start -->
-      <section
-        id="landingFunFacts"
-        class="section-py landing-fun-facts py-12 my-4"
-      >
-        <div class="container">
-          <div class="row gx-0 gy-5 gx-sm-6">
-            <div class="col-md-3 col-sm-6 text-center">
-              <span
-                class="badge rounded-pill bg-label-primary bg-label-hover fun-facts-icon mb-6 p-5"
-                ><i class="icon-base ri ri-layout-line icon-42px"></i
-              ></span>
-              <h2 class="fw-bold mb-0 fun-facts-text">137+</h2>
-              <h6 class="mb-0 text-body">Completed Sites</h6>
-            </div>
-            <div class="col-md-3 col-sm-6 text-center">
-              <span
-                class="badge rounded-pill bg-label-success bg-label-hover fun-facts-icon mb-6 p-5"
-                ><i class="icon-base ri ri-time-line icon-42px"></i
-              ></span>
-              <h2 class="fw-bold mb-0 fun-facts-text">1,100+</h2>
-              <h6 class="mb-0 text-body">Working Hours</h6>
-            </div>
-            <div class="col-md-3 col-sm-6 text-center">
-              <span
-                class="badge rounded-pill bg-label-warning bg-label-hover fun-facts-icon mb-6 p-5"
-                ><i class="icon-base ri ri-user-smile-line icon-42px"></i
-              ></span>
-              <h2 class="fw-bold mb-0 fun-facts-text">137+</h2>
-              <h6 class="mb-0 text-body">Happy Customers</h6>
-            </div>
-            <div class="col-md-3 col-sm-6 text-center">
-              <span
-                class="badge rounded-pill bg-label-info bg-label-hover fun-facts-icon mb-6 p-5"
-                ><i class="icon-base ri ri-award-line icon-42px"></i
-              ></span>
-              <h2 class="fw-bold mb-0 fun-facts-text">23+</h2>
-              <h6 class="mb-0 text-body">Awards Winning</h6>
-            </div>
-          </div>
-        </div>
-      </section>
-      <!-- Fun facts: End -->
-
-      <!-- FAQ: Start -->
-      <section id="landingFAQ" class="section-py bg-body landing-faq">
-        <div class="container bg-icon-right">
-          <img
-            src="/public/img/front-pages/icons/bg-right-icon-light.png"
-            alt="section icon"
-            class="position-absolute top-0 end-0"
-            data-speed="1"
-            data-app-light-img="front-pages/icons/bg-right-icon-light.png"
-            data-app-dark-img="front-pages/icons/bg-right-icon-dark.png"
-          />
-          <h6
-            class="text-center d-flex justify-content-center align-items-center mb-6"
-          >
-            <img
-              src="/public/img/front-pages/icons/section-title-icon.png"
-              alt="section title icon"
-              class="me-3"
-              height="19"
-            />
-            <span class="text-uppercase">faq</span>
-          </h6>
-          <h5 class="text-center mb-2">
-            Frequently asked<span class="h4 fw-bold"> questions</span>
-          </h5>
-          <p class="text-center fw-medium mb-4 mb-md-12 pb-4">
-            Browse through these FAQs to find answers to commonly asked
-            questions.
-          </p>
-          <div class="row gy-5">
-            <div class="col-lg-5">
-              <div class="text-center">
-                <img
-                  src="/public/img/front-pages/landing-page/sitting-girl-with-laptop.png
-          "
-                  alt="sitting girl with laptop"
-                  class="faq-image scaleX-n1-rtl"
-                />
-              </div>
-            </div>
-            <div class="col-lg-7">
-              <div class="accordion" id="accordionFront">
-                <div class="accordion-item">
-                  <h2 class="accordion-header" id="head-One">
-                    <button
-                      type="button"
-                      class="accordion-button collapsed"
-                      data-bs-toggle="collapse"
-                      data-bs-target="#accordionOne"
-                      aria-expanded="true"
-                      aria-controls="accordionOne"
-                    >
-                      Do you charge for each upgrade?
-                    </button>
-                  </h2>
-
-                  <div
-                    id="accordionOne"
-                    class="accordion-collapse collapse"
-                    data-bs-parent="#accordionFront"
-                    aria-labelledby="accordionOne"
-                  >
-                    <div class="accordion-body">
-                      Lemon drops chocolate cake gummies carrot cake chupa chups
-                      muffin topping. Sesame snaps icing marzipan gummi bears
-                      macaroon dragée danish caramels powder. Bear claw dragée
-                      pastry topping soufflé. Wafer gummi bears marshmallow
-                      pastry pie.
-                    </div>
-                  </div>
-                </div>
-                <div class="accordion-item previous-active">
-                  <h2 class="accordion-header" id="head-Two">
-                    <button
-                      type="button"
-                      class="accordion-button collapsed"
-                      data-bs-toggle="collapse"
-                      data-bs-target="#accordionTwo"
-                      aria-expanded="false"
-                      aria-controls="accordionTwo"
-                    >
-                      Do I need to purchase a license for each website?
-                    </button>
-                  </h2>
-                  <div
-                    id="accordionTwo"
-                    class="accordion-collapse collapse"
-                    aria-labelledby="accordionTwo"
-                    data-bs-parent="#accordionFront"
-                  >
-                    <div class="accordion-body">
-                      Dessert ice cream donut oat cake jelly-o pie sugar plum
-                      cheesecake. Bear claw dragée oat cake dragée ice cream
-                      halvah tootsie roll. Danish cake oat cake pie macaroon
-                      tart donut gummies. Jelly beans candy canes carrot cake.
-                      Fruitcake chocolate chupa chups.
-                    </div>
-                  </div>
-                </div>
-                <div class="accordion-item active">
-                  <h2 class="accordion-header" id="head-Three">
-                    <button
-                      type="button"
-                      class="accordion-button"
-                      data-bs-toggle="collapse"
-                      data-bs-target="#accordionThree"
-                      aria-expanded="true"
-                      aria-controls="accordionThree"
-                    >
-                      What is regular license?
-                    </button>
-                  </h2>
-                  <div
-                    id="accordionThree"
-                    class="accordion-collapse collapse show"
-                    aria-labelledby="accordionThree"
-                    data-bs-parent="#accordionFront"
-                  >
-                    <div class="accordion-body">
-                      Regular license can be used for end products that do not
-                      charge users for access or service(access is free and
-                      there will be no monthly subscription fee). Single regular
-                      license can be used for single end product and end product
-                      can be used by you or your client. If you want to sell end
-                      product to multiple clients then you will need to purchase
-                      separate license for each client. The same rule applies if
-                      you want to use the same end product on multiple
-                      domains(unique setup). For more info on regular license
-                      you can check official description.
-                    </div>
-                  </div>
-                </div>
-                <div class="accordion-item">
-                  <h2 class="accordion-header" id="head-Four">
-                    <button
-                      type="button"
-                      class="accordion-button collapsed"
-                      data-bs-toggle="collapse"
-                      data-bs-target="#accordionFour"
-                      aria-expanded="false"
-                      aria-controls="accordionFour"
-                    >
-                      What is extended license?
-                    </button>
-                  </h2>
-                  <div
-                    id="accordionFour"
-                    class="accordion-collapse collapse"
-                    aria-labelledby="accordionFour"
-                    data-bs-parent="#accordionFront"
-                  >
-                    <div class="accordion-body">
-                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                      Nobis et aliquid quaerat possimus maxime! Mollitia
-                      reprehenderit neque repellat deleniti delectus architecto
-                      dolorum maxime, blanditiis earum ea, incidunt quam
-                      possimus cumque.
-                    </div>
-                  </div>
-                </div>
-                <div class="accordion-item">
-                  <h2 class="accordion-header" id="head-Five">
-                    <button
-                      type="button"
-                      class="accordion-button collapsed"
-                      data-bs-toggle="collapse"
-                      data-bs-target="#accordionFive"
-                      aria-expanded="false"
-                      aria-controls="accordionFive"
-                    >
-                      Which license is applicable for SASS application?
-                    </button>
-                  </h2>
-                  <div
-                    id="accordionFive"
-                    class="accordion-collapse collapse"
-                    aria-labelledby="accordionFive"
-                    data-bs-parent="#accordionFront"
-                  >
-                    <div class="accordion-body">
-                      Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                      Sequi molestias exercitationem ab cum nemo facere
-                      voluptates veritatis quia, eveniet veniam at et
-                      repudiandae mollitia ipsam quasi labore enim architecto
-                      non!
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <!-- FAQ: End -->
-
-      <!-- CTA: Start -->
-      <section
-        id="landingCTA"
-        class="section-py landing-cta p-lg-0 pb-0 position-relative"
-      >
-        <img
-          src="/public/img/front-pages/backgrounds/cta-bg.png"
-          class="position-absolute bottom-0 end-0 scaleX-n1-rtl h-100 w-100 z-n1"
-          alt="cta image"
-        />
-        <div class="container">
-          <div class="row align-items-center gy-5 gy-lg-0">
-            <div class="col-lg-6 text-center text-lg-start">
-              <h2 class="display-5 text-primary fw-bold mb-0">
-                Ready to Get Started?
-              </h2>
-              <p class="fw-medium mb-6 mb-md-8">
-                Start your project with a 14-day free trial
-              </p>
-              <a href="payment-page.html" class="btn btn-primary"
-                >Get Started<i
-                  class="icon-base ri ri-arrow-right-line icon-16px ms-2 scaleX-n1-rtl"
-                ></i
-              ></a>
-            </div>
-            <div class="col-lg-6 pt-lg-12">
-              <img
-                src="/public/img/front-pages/landing-page/cta-dashboard.png"
-                alt="cta dashboard"
-                class="img-fluid"
-              />
-            </div>
-          </div>
-        </div>
-      </section>
-      <!-- CTA: End -->
-
-      <!-- Contact Us: Start -->
-      <section id="landingContact" class="section-py bg-body landing-contact">
-        <div class="container bg-icon-left position-relative">
-          <img
-            src="/public/img/front-pages/icons/bg-left-icon-light.png"
-            alt="section icon"
-            class="position-absolute top-0 start-0"
-            data-speed="1"
-            data-app-light-img="front-pages/icons/bg-left-icon-light.png"
-            data-app-dark-img="front-pages/icons/bg-left-icon-dark.png"
-          />
-          <h6
-            class="text-center d-flex justify-content-center align-items-center mb-6"
-          >
-            <img
-              src="/public/img/front-pages/icons/section-title-icon.png"
-              alt="section title icon"
-              class="me-3"
-              height="19"
-            />
-            <span class="text-uppercase">contact us</span>
-          </h6>
-          <h5 class="text-center mb-2">
-            <span class="h4 fw-bold">Lets work</span> together
-          </h5>
-          <p class="text-center fw-medium mb-4 mb-md-12 pb-3">
-            Any question or remark? just write us a message
-          </p>
-          <div class="row gy-4">
-            <div class="col-lg-5">
-              <div class="card h-100">
-                <div class="bg-primary rounded-4 text-white card-body p-lg-8">
-                  <p class="fw-medium mb-1_5 tagline">Let’s contact with us</p>
-                  <h4 class="text-white mb-5 title">
-                    Share your ideas or requirement with our experts.
-                  </h4>
-                  <img
-                    src="/public/img/front-pages/landing-page/let’s-contact.png"
-                    alt="let’s contact"
-                    class="w-100 mb-4 pb-1"
-                  />
-                  <p class="mb-0 description">
-                    Looking for more customisation, more features, and more
-                    anything? Don’t worry, We’ve provide you with an entire team
-                    of experienced professionals.
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div class="col-lg-7">
-              <div class="card">
-                <div class="card-body">
-                  <h5 class="mb-6">Share your ideas</h5>
-                  <form>
-                    <div class="row g-5">
-                      <div class="col-md-6">
-                        <div class="form-floating form-floating-outline">
-                          <input
-                            type="text"
-                            class="form-control"
-                            id="basic-default-fullname"
-                            placeholder="John Doe"
-                          />
-                          <label for="basic-default-fullname">Full name</label>
-                        </div>
-                      </div>
-
-                      <div class="col-md-6">
-                        <div class="form-floating form-floating-outline">
-                          <input
-                            type="email"
-                            class="form-control"
-                            id="basic-default-email"
-                            placeholder="johndoe99@gmail.com"
-                          />
-                          <label for="basic-default-email">Email address</label>
-                        </div>
-                      </div>
-
-                      <div class="col-12">
-                        <div class="form-floating form-floating-outline">
-                          <textarea
-                            class="form-control h-px-250"
-                            placeholder="Message"
-                            aria-label="Message"
-                            id="basic-default-message"
-                          ></textarea>
-                          <label for="basic-default-message">Message</label>
-                        </div>
-                      </div>
-                    </div>
-                    <button type="submit" class="btn btn-primary mt-5">
-                      Send inquiry
-                    </button>
-                  </form>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <!-- Contact Us: End -->
-    </div>
+      </div>
+    </section>
+    <!-- Popular Articles: End -->
 
     <!-- / Sections:End -->
 
     <!-- Footer: Start -->
     <footer class="landing-footer">
-      <div class="footer-top position-relative overflow-hidden">
-        <img
-          src="/public/img/front-pages/backgrounds/footer-bg.png"
-          alt="footer bg"
-          class="footer-bg banner-bg-img"
-        />
-        <div class="container">
-          <div class="row gx-0 gy-6 g-lg-10">
-            <div class="col-lg-5">
-              <a href="landing-page.html" class="app-brand-link mb-6">
-                <span class="app-brand-logo demo">
-                  <span class="text-primary">
-                    <svg
-                      width="32"
-                      height="18"
-                      viewBox="0 0 38 20"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M30.0944 2.22569C29.0511 0.444187 26.7508 -0.172113 24.9566 0.849138C23.1623 1.87039 22.5536 4.14247 23.5969 5.92397L30.5368 17.7743C31.5801 19.5558 33.8804 20.1721 35.6746 19.1509C37.4689 18.1296 38.0776 15.8575 37.0343 14.076L30.0944 2.22569Z"
-                        fill="currentColor"
-                      />
-                      <path
-                        d="M30.171 2.22569C29.1277 0.444187 26.8274 -0.172113 25.0332 0.849138C23.2389 1.87039 22.6302 4.14247 23.6735 5.92397L30.6134 17.7743C31.6567 19.5558 33.957 20.1721 35.7512 19.1509C37.5455 18.1296 38.1542 15.8575 37.1109 14.076L30.171 2.22569Z"
-                        fill="url(#paint0_linear_2989_100980)"
-                        fill-opacity="0.4"
-                      />
-                      <path
-                        d="M22.9676 2.22569C24.0109 0.444187 26.3112 -0.172113 28.1054 0.849138C29.8996 1.87039 30.5084 4.14247 29.4651 5.92397L22.5251 17.7743C21.4818 19.5558 19.1816 20.1721 17.3873 19.1509C15.5931 18.1296 14.9843 15.8575 16.0276 14.076L22.9676 2.22569Z"
-                        fill="currentColor"
-                      />
-                      <path
-                        d="M14.9558 2.22569C13.9125 0.444187 11.6122 -0.172113 9.818 0.849138C8.02377 1.87039 7.41502 4.14247 8.45833 5.92397L15.3983 17.7743C16.4416 19.5558 18.7418 20.1721 20.5361 19.1509C22.3303 18.1296 22.9391 15.8575 21.8958 14.076L14.9558 2.22569Z"
-                        fill="currentColor"
-                      />
-                      <path
-                        d="M14.9558 2.22569C13.9125 0.444187 11.6122 -0.172113 9.818 0.849138C8.02377 1.87039 7.41502 4.14247 8.45833 5.92397L15.3983 17.7743C16.4416 19.5558 18.7418 20.1721 20.5361 19.1509C22.3303 18.1296 22.9391 15.8575 21.8958 14.076L14.9558 2.22569Z"
-                        fill="url(#paint1_linear_2989_100980)"
-                        fill-opacity="0.4"
-                      />
-                      <path
-                        d="M7.82901 2.22569C8.87231 0.444187 11.1726 -0.172113 12.9668 0.849138C14.7611 1.87039 15.3698 4.14247 14.3265 5.92397L7.38656 17.7743C6.34325 19.5558 4.04298 20.1721 2.24875 19.1509C0.454514 18.1296 -0.154233 15.8575 0.88907 14.076L7.82901 2.22569Z"
-                        fill="currentColor"
-                      />
-                      <defs>
-                        <linearGradient
-                          id="paint0_linear_2989_100980"
-                          x1="5.36642"
-                          y1="0.849138"
-                          x2="10.532"
-                          y2="24.104"
-                          gradientUnits="userSpaceOnUse"
-                        >
-                          <stop offset="0" stop-opacity="1" />
-                          <stop offset="1" stop-opacity="0" />
-                        </linearGradient>
-                        <linearGradient
-                          id="paint1_linear_2989_100980"
-                          x1="5.19475"
-                          y1="0.849139"
-                          x2="10.3357"
-                          y2="24.1155"
-                          gradientUnits="userSpaceOnUse"
-                        >
-                          <stop offset="0" stop-opacity="1" />
-                          <stop offset="1" stop-opacity="0" />
-                        </linearGradient>
-                      </defs>
-                    </svg>
-                  </span>
-                </span>
-                <span
-                  class="app-brand-text demo text-white fw-semibold ms-2 ps-1"
-                  >Materialize</span
-                >
-              </a>
-              <p class="footer-text footer-logo-description mb-6">
-                Most Powerful & Comprehensive 🤩 React NextJS Admin Template
-                with Elegant Material Design & Unique Layouts.
-              </p>
-              <form class="footer-form">
-                <div class="d-flex mt-2 gap-4">
-                  <div class="form-floating form-floating-outline w-px-250">
-                    <input
-                      type="text"
-                      class="form-control bg-transparent"
-                      id="newsletter-1"
-                      placeholder="Your email"
-                    />
-                    <label for="newsletter-1">Subscribe to newsletter</label>
-                  </div>
-                  <button type="submit" class="btn btn-primary">
-                    Subscribe
-                  </button>
-                </div>
-              </form>
-            </div>
-            <div class="col-lg-2 col-md-4 col-sm-6">
-              <h6 class="footer-title mb-4 mb-lg-6">Demos</h6>
-              <ul class="list-unstyled mb-0">
-                <li class="mb-4">
-                  <a
-                    href="../vertical-menu-template/"
-                    target="_blank"
-                    class="footer-link"
-                    >Vertical Layout</a
-                  >
-                </li>
-                <li class="mb-4">
-                  <a
-                    href="../horizontal-menu-template/"
-                    target="_blank"
-                    class="footer-link"
-                    >Horizontal Layout</a
-                  >
-                </li>
-                <li class="mb-4">
-                  <a
-                    href="../vertical-menu-template-bordered/"
-                    target="_blank"
-                    class="footer-link"
-                    >Bordered Layout</a
-                  >
-                </li>
-                <li class="mb-4">
-                  <a
-                    href="../vertical-menu-template-semi-dark/"
-                    target="_blank"
-                    class="footer-link"
-                    >Semi Dark Layout</a
-                  >
-                </li>
-                <li>
-                  <a
-                    href="../vertical-menu-template-dark/"
-                    target="_blank"
-                    class="footer-link"
-                    >Dark Layout</a
-                  >
-                </li>
-              </ul>
-            </div>
-            <div class="col-lg-2 col-md-4 col-sm-6">
-              <h6 class="footer-title mb-4 mb-lg-6">Pages</h6>
-              <ul class="list-unstyled mb-0">
-                <li class="mb-4">
-                  <a href="pricing-page.html" class="footer-link">Pricing</a>
-                </li>
-                <li class="mb-4">
-                  <a href="payment-page.html" class="footer-link"
-                    >Payment<span class="badge rounded-pill bg-primary ms-2"
-                      >New</span
-                    ></a
-                  >
-                </li>
-                <li class="mb-4">
-                  <a href="checkout-page.html" class="footer-link">Checkout</a>
-                </li>
-                <li class="mb-4">
-                  <a href="help-center-landing.html" class="footer-link"
-                    >Help Center</a
-                  >
-                </li>
-                <li>
-                  <a
-                    href="../vertical-menu-template/auth-login-cover.html"
-                    target="_blank"
-                    class="footer-link"
-                    >Login/Register</a
-                  >
-                </li>
-              </ul>
-            </div>
-            <div class="col-lg-3 col-md-4">
-              <h6 class="footer-title mb-4 mb-lg-6">Download our app</h6>
-              <a href="javascript:void(0);" class="d-block footer-link mb-4"
-                ><img
-                  src="/public/img/front-pages/landing-page/apple-icon.png"
-                  alt="apple icon"
-              /></a>
-              <a href="javascript:void(0);" class="d-block footer-link"
-                ><img
-                  src="/public/img/front-pages/landing-page/google-play-icon.png"
-                  alt="google play icon"
-              /></a>
-            </div>
-          </div>
-        </div>
-      </div>
       <div class="footer-bottom py-5">
         <div
           class="container d-flex flex-wrap justify-content-between flex-md-row flex-column text-center text-md-start"
@@ -2543,17 +886,25 @@
     <!-- Footer: End -->
 
     <!-- Core JS -->
-    <script type="module" src="/src/main.js"></script>
-    <!--
+
+    <!-- build:js vendor/js/theme.js  -->
+
     <script src="/public/vendor/libs/popper/popper.js"></script>
     <script src="/public/vendor/js/bootstrap.js"></script>
     <script src="/public/vendor/libs/node-waves/node-waves.js"></script>
+
     <script src="/public/vendor/libs/@algolia/autocomplete-js.js"></script>
+
     <script src="/public/vendor/libs/pickr/pickr.js"></script>
-    <script src="/public/vendor/libs/nouislider/nouislider.js"></script>
-    <script src="/public/vendor/libs/swiper/swiper.js"></script>
+
+    <!-- endbuild -->
+
+    <!-- Vendors JS -->
+
+    <!-- Main JS -->
+
     <script src="/public/js/front-main.js"></script>
-    <script src="/public/js/front-page-landing.js"></script>
-    -->
+
+    <!-- Page JS -->
   </body>
 </html>

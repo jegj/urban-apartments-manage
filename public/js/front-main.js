@@ -3,39 +3,15 @@
  */
 "use strict";
 
-window.isRtl = window.Helpers.isRtl();
 window.isDarkStyle = window.Helpers.isDarkStyle();
 
 (function () {
-  const menu = document.getElementById("navbarSupportedContent"),
-    nav = document.querySelector(".layout-navbar"),
-    navItemLink = document.querySelectorAll(".navbar-nav .nav-link");
+  const nav = document.querySelector(".layout-navbar");
 
   // Initialised custom options if checked
   setTimeout(function () {
     window.Helpers.initCustomOptionCheck();
   }, 1000);
-
-  // Init BS Tooltip
-  const tooltipTriggerList = [].slice.call(
-    document.querySelectorAll('[data-bs-toggle="tooltip"]'),
-  );
-  tooltipTriggerList.map(function (tooltipTriggerEl) {
-    return new bootstrap.Tooltip(tooltipTriggerEl);
-  });
-
-  if (isRtl) {
-    // If layout is RTL add .dropdown-menu-end class to .dropdown-menu
-    Helpers._addClass(
-      "dropdown-menu-end",
-      document.querySelectorAll("#layout-navbar .dropdown-menu"),
-    );
-    // If layout is RTL add .dropdown-menu-end class to .dropdown-menu
-    Helpers._addClass(
-      "dropdown-menu-end",
-      document.querySelectorAll(".dropdown-menu"),
-    );
-  }
 
   // Navbar
   window.addEventListener("scroll", () => {
@@ -53,40 +29,11 @@ window.isDarkStyle = window.Helpers.isDarkStyle();
     }
   });
 
-  // Function to close the mobile menu
-  function closeMenu() {
-    menu.classList.remove("show");
-  }
-
-  document.addEventListener("click", function (event) {
-    // Check if the clicked element is inside mobile menu
-    if (menu && !menu.contains(event.target)) {
-      closeMenu();
-    }
-  });
-  navItemLink.forEach((link) => {
-    link.addEventListener("click", (event) => {
-      if (!link.classList.contains("dropdown-toggle")) {
-        closeMenu();
-      } else {
-        event.preventDefault();
-      }
-    });
-  });
-
   // Get style from local storage or use 'system' as default
   let storedStyle =
     localStorage.getItem("templateCustomizer-" + templateName + "--Theme") || //if no template style then use Customizer style
     (window.templateCustomizer?.settings?.defaultStyle ??
       document.documentElement.getAttribute("data-bs-theme")); //!if there is no Customizer then use default style as light
-
-  let styleSwitcher = document.querySelector(".dropdown-style-switcher");
-  const styleSwitcherIcon = styleSwitcher.querySelector("i");
-
-  new bootstrap.Tooltip(styleSwitcherIcon, {
-    title: storedStyle.charAt(0).toUpperCase() + storedStyle.slice(1) + " Mode",
-    fallbackPlacements: ["bottom"],
-  });
 
   // Run switchImage function based on the stored style
   window.Helpers.switchImage(storedStyle);
@@ -130,10 +77,6 @@ window.isDarkStyle = window.Helpers.isDarkStyle();
             ? "dark"
             : "light";
         }
-        new bootstrap.Tooltip(styleSwitcherIcon, {
-          title: theme.charAt(0).toUpperCase() + theme.slice(1) + " Mode",
-          fallbackPlacements: ["bottom"],
-        });
         window.Helpers.switchImage(currTheme);
       });
     });

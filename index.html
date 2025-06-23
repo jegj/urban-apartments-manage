@@ -51,7 +51,11 @@
 
   <body>
     <!-- Navbar: Start -->
-    <nav class="layout-navbar shadow-none py-0">
+    <nav
+      x-data="navbar"
+      class="layout-navbar shadow-none py-0"
+      :class="{ 'navbar-active': active }"
+    >
       <div class="container">
         <div class="navbar navbar-expand-lg landing-navbar px-3 px-md-8">
           <!-- Menu logo wrapper: Start -->

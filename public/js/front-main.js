@@ -6,28 +6,10 @@
 window.isDarkStyle = window.Helpers.isDarkStyle();
 
 (function () {
-  const nav = document.querySelector(".layout-navbar");
-
   // Initialised custom options if checked
   setTimeout(function () {
     window.Helpers.initCustomOptionCheck();
   }, 1000);
-
-  // Navbar
-  window.addEventListener("scroll", () => {
-    if (window.scrollY > 10) {
-      nav.classList.add("navbar-active");
-    } else {
-      nav.classList.remove("navbar-active");
-    }
-  });
-  window.addEventListener("load", () => {
-    if (window.scrollY > 10) {
-      nav.classList.add("navbar-active");
-    } else {
-      nav.classList.remove("navbar-active");
-    }
-  });
 
   // Get style from local storage or use 'system' as default
   let storedStyle =

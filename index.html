@@ -8,6 +8,7 @@
   data-bs-theme="light"
   data-assets-path="/public/"
   data-template="front-pages"
+  x-data="translation"
 >
   <head>
     <meta charset="utf-8" />
@@ -49,8 +50,6 @@
   </head>
 
   <body>
-    <script src="/public/vendor/js/dropdown-hover.js"></script>
-    <script src="/public/vendor/js/mega-dropdown.js"></script>
     <!-- Navbar: Start -->
     <nav class="layout-navbar shadow-none py-0">
       <div class="container">
@@ -150,6 +149,7 @@
                     href="javascript:void(0);"
                     data-language="en"
                     data-text-direction="ltr"
+                    @click="setLanguage('en')"
                   >
                     <span>English</span>
                   </a>
@@ -160,6 +160,7 @@
                     href="javascript:void(0);"
                     data-language="fr"
                     data-text-direction="ltr"
+                    @click="setLanguage('es')"
                   >
                     <span>Spanish</span>
                   </a>
@@ -387,20 +388,8 @@
       </div>
     </footer>
     <!-- Footer: End -->
-
-    <!-- Core JS -->
-
-    <!-- build:js vendor/js/theme.js  -->
-
     <script src="/public/vendor/js/bootstrap.js"></script>
-    <script src="/public/vendor/libs/node-waves/node-waves.js"></script>
-
-    <!-- endbuild -->
-
-    <!-- Vendors JS -->
-
-    <!-- Main JS -->
     <script src="/public/js/front-main.js"></script>
-    <!-- Page JS -->
+    <script type="module" src="./src/main.js"></script>
   </body>
 </html>

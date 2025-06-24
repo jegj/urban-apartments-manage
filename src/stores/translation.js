@@ -12,7 +12,6 @@ export default function createTranslator(translations) {
     },
 
     setLanguage(lang) {
-      console.log("===>", lang);
       this.lang = lang;
       localStorage.setItem("lang", lang);
     },
@@ -21,9 +20,13 @@ export default function createTranslator(translations) {
 
 // Translations
 export const defaultTranslations = {
-  welcome: {
-    en: "Welcome",
-    es: "Bienvenido",
+  "apartment:home:services": {
+    en: "Apartment's Services",
+    es: "Servicios del Departamento",
+  },
+  "apartment:home:accomodation": {
+    en: "Accomodation",
+    es: "Alojamiento",
   },
   button_text: {
     en: "Click me",

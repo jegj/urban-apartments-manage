@@ -132,9 +132,6 @@
             </a>
           </div>
           <!-- Menu logo wrapper: End -->
-          <!-- Menu wrapper: Start -->
-          <div class="landing-menu-overlay d-lg-none"></div>
-          <!-- Menu wrapper: End -->
           <!-- Toolbar: Start -->
           <ul class="navbar-nav flex-row align-items-center ms-auto">
             <li class="nav-item dropdown-language dropdown me-2 me-xl-0">
@@ -156,7 +153,7 @@
                     @click="setLanguage('en')"
                     :class="{ 'active': lang === 'en' }"
                   >
-                    <span>English</span>
+                    <span x-text="t('navbar:translate:english')">English</span>
                   </a>
                 </li>
                 <li>
@@ -168,7 +165,7 @@
                     @click="setLanguage('es')"
                     :class="{ 'active': lang === 'es' }"
                   >
-                    <span>Spanish</span>
+                    <span x-text="t('navbar:translate:spanish')">Spanish</span>
                   </a>
                 </li>
               </ul>
@@ -226,7 +223,9 @@
                   <a href="#">
                     <div class="card-body text-center">
                       <i class="icon-base ri ri-ticket-line icon-48px"></i>
-                      <h5 class="my-3">Tours and excursions</h5>
+                      <h5 class="my-3" x-text="t('apartment:home:tour')">
+                        Tours and excursions
+                      </h5>
                     </div>
                   </a>
                 </div>
@@ -237,7 +236,12 @@
                   <a href="#">
                     <div class="card-body text-center">
                       <i class="icon-base ri ri-camera-3-line icon-48px"></i>
-                      <h5 class="my-3">Tourist Places</h5>
+                      <h5
+                        class="my-3"
+                        x-text="t('apartment:home:tourist_places')"
+                      >
+                        Tourist Places
+                      </h5>
                     </div>
                   </a>
                 </div>
@@ -250,7 +254,12 @@
                       <i
                         class="icon-base ri ri-service-bell-line icon-48px"
                       ></i>
-                      <h5 class="my-3">Additional Services</h5>
+                      <h5
+                        class="my-3"
+                        x-text="t('apartment:home:additional_services')"
+                      >
+                        Additional Services
+                      </h5>
                     </div>
                   </a>
                 </div>
@@ -261,7 +270,9 @@
                   <a href="#">
                     <div class="card-body text-center">
                       <i class="icon-base ri ri-map-2-line icon-48px"></i>
-                      <h5 class="my-3">Around Me</h5>
+                      <h5 class="my-3" x-text="t('apartment:home:around')">
+                        Around Me
+                      </h5>
                     </div>
                   </a>
                 </div>
@@ -272,7 +283,9 @@
                   <a href="#">
                     <div class="card-body text-center">
                       <i class="icon-base ri ri-info-i icon-48px"></i>
-                      <h5 class="my-3">Information</h5>
+                      <h5 class="my-3" x-text="t('apartment:home:information')">
+                        Information
+                      </h5>
                     </div>
                   </a>
                 </div>
@@ -287,8 +300,8 @@
       <div class="container">
         <div class="row justify-content-center">
           <div class="col-md-8 col-lg-6 text-center">
-            <h4>Still need help?</h4>
-            <p>
+            <h4 x-text="t('apartment:home:help-title')">Still need help?</h4>
+            <p x-text="t('apartment:home:help-description')">
               Our specialists are always happy to help.<br />Contact us during
               standard business hours or email us 24/7 and we'll get back to
               you.
@@ -297,6 +310,7 @@
               <a
                 href="javascript:void(0);"
                 class="btn btn-primary waves-effect waves-light"
+                x-text="t('apartment:home:help-button')"
                 >Contact us</a
               >
             </div>

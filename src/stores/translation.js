@@ -56,6 +56,14 @@ export const defaultTranslations = {
     es: "Informacion",
     en: "Information",
   },
+  "apartment:home:luggage_storage": {
+    es: "Guardado de Equipaje",
+    en: "Luggage Storage",
+  },
+  "apartment:home:taxi_request": {
+    es: "Solicita un Taxi",
+    en: "Request a Taxi",
+  },
   "apartment:home:help-title": {
     es: "¿Aún necesita ayuda?",
     en: "Still need help?",

@@ -1,14 +1,6 @@
 <!doctype html>
 
-<html
-  lang="en"
-  class="layout-navbar-fixed layout-menu-fixed layout-compact"
-  dir="ltr"
-  data-skin="default"
-  data-bs-theme="light"
-  data-assets-path="public/assets/"
-  data-template="vertical-menu-template-no-customizer"
->
+<html lang="en" class="layout-navbar-fixed layout-wide" x-data="translation">
   <head>
     <meta charset="utf-8" />
     <meta
@@ -64,7 +56,6 @@
       href="/public/vendor/css/pages/front-page-help-center.css"
     />
 
-
     <!-- Helpers -->
     <script src="/public/vendor/js/helpers.js"></script>
     <!--! Template customizer & Theme config files MUST be included after core stylesheets and helpers.js in the <head> section -->
@@ -86,7 +77,7 @@
           <div
             class="navbar-brand app-brand demo d-xl-flex py-0 me-6 d-lg-flex"
           >
-            <a href="landing-page.html" class="app-brand-link gap-2">
+            <a href="#" class="app-brand-link gap-2">
               <span class="app-brand-logo demo">
                 <span class="text-primary">
                   <svg
@@ -158,6 +149,15 @@
           <!-- Menu logo wrapper: End -->
           <!-- Toolbar: Start -->
           <ul class="navbar-nav flex-row align-items-center ms-auto">
+            <li class="nav-item me-2 me-xl-0">
+              <a
+                class="nav-link hide-arrow me-sm-2"
+                href="javascript:void(0);"
+                aria-expanded="false"
+              >
+                <i class="icon-base ri ri-arrow-left-line icon-22px"></i>
+              </a>
+            </li>
             <li class="nav-item dropdown-language dropdown me-2 me-xl-0">
               <a
                 class="nav-link dropdown-toggle hide-arrow me-sm-2"
@@ -200,121 +200,43 @@
       </div>
     </nav>
 
-    <!-- <section -->
-    <!--   class="section-py first-section-pt help-center-header position-relative overflow-hidden" -->
-    <!-- > -->
-    <!--   <img -->
-    <!--     class="banner-bg-img z-n1" -->
-    <!--     src="/public/img/pages/header-light.png" -->
-    <!--     alt="Help center header" -->
-    <!--     data-app-light-img="pages/header-light.png" -->
-    <!--     data-app-dark-img="pages/header-dark.png" -->
-    <!--   /> -->
-    <!--   <h2 class="text-center text-primary">Patria #106</h2> -->
-    <!-- </section> -->
+    <section
+      class="section-py first-section-pt help-center-header position-relative overflow-hidden"
+    >
+      <img
+        class="banner-bg-img z-n1"
+        src="/public/img/pages/header-light.png"
+        alt="Help center header"
+        data-app-light-img="pages/header-light.png"
+        data-app-dark-img="pages/header-dark.png"
+      />
+      <h2 class="text-center text-primary">Tourist Places</h2>
+    </section>
 
     <section class="section-py">
       <div class="container">
-        <h4 class="text-center mb-6" x-text="t('apartment:home:services')">
-          Apartment's Services
-        </h4>
         <div class="row">
           <div class="app-academy">
-            <div class="card p-0 mb-6">
-              <div
-                class="card-body d-flex flex-column flex-md-row justify-content-between p-0 pt-6"
-              >
-                <div class="app-academy-md-25 card-body py-0 pt-6 ps-12">
-                  <img
-                    src="/public/img/illustrations/bulb-light.png"
-                    class="img-fluid app-academy-img-height scaleX-n1-rtl"
-                    alt="Bulb in hand"
-                    data-app-light-img="illustrations/bulb-light.png"
-                    data-app-dark-img="illustrations/bulb-dark.png"
-                    height="90"
-                  />
-                </div>
-                <div
-                  class="app-academy-md-50 card-body d-flex align-items-md-center flex-column text-md-center mb-6 py-6"
-                >
-                  <span class="card-title mb-4 lh-lg px-md-12 h4 text-heading">
-                    Education, talents, and career<br />
-                    opportunities.
-                    <span class="text-primary text-nowrap"
-                      >All in one place</span
-                    >.
-                  </span>
-                  <p class="mb-4 px-0 px-md-2">
-                    Grow your skill with the most reliable online courses and
-                    certifications in<br />
-                    marketing, information technology, programming, and data
-                    science.
-                  </p>
-                  <div
-                    class="d-flex align-items-center justify-content-between app-academy-md-80"
-                  >
-                    <input
-                      type="search"
-                      placeholder="Find your course"
-                      class="form-control form-control-sm me-4"
-                    />
-                    <button type="submit" class="btn btn-primary btn-icon">
-                      <i class="icon-base ri ri-search-line icon-22px"></i>
-                    </button>
-                  </div>
-                </div>
-                <div
-                  class="app-academy-md-25 d-flex align-items-end justify-content-end"
-                >
-                  <img
-                    src="/public/img/illustrations/pencil-rocket.png"
-                    alt="pencil rocket"
-                    height="180"
-                    class="scaleX-n1-rtl"
-                  />
-                </div>
-              </div>
-            </div>
-
-            <div class="card mb-6">
+            <div class="card mb-12">
               <div
                 class="card-header d-flex flex-wrap justify-content-between gap-4"
               >
-                <div class="card-title mb-0 me-1">
-                  <h5 class="mb-0">My Courses</h5>
-                  <p class="mb-0 text-body">
-                    Total 6 course you have purchased
-                  </p>
-                </div>
                 <div
                   class="d-flex justify-content-md-end align-items-center gap-6 flex-wrap"
                 >
                   <select class="form-select form-select-sm w-px-250">
-                    <option value="all courses">All Courses</option>
+                    <option value="all courses">All Places</option>
                     <option value="ui/ux">UI/UX</option>
                     <option value="seo">SEO</option>
                     <option value="web">Web</option>
                     <option value="music">Music</option>
                     <option value="painting">Painting</option>
                   </select>
-
-                  <div class="form-check form-switch mb-0">
-                    <input
-                      type="checkbox"
-                      class="form-check-input"
-                      id="CourseSwitch"
-                    />
-                    <label
-                      class="form-check-label text-nowrap mb-0"
-                      for="CourseSwitch"
-                      >Hide completed</label
-                    >
-                  </div>
                 </div>
               </div>
               <div class="card-body mt-1">
                 <div class="row gy-6 mb-6">
-                  <div class="col-sm-6 col-lg-4">
+                  <div class="col-sm-12 col-lg-4">
                     <div class="card p-2 h-100 shadow-none border rounded-3">
                       <div class="rounded-4 text-center mb-5">
                         <a href="app-academy-course-details.html"
@@ -392,7 +314,7 @@
                       </div>
                     </div>
                   </div>
-                  <div class="col-sm-6 col-lg-4">
+                  <div class="col-sm-12 col-lg-4">
                     <div class="card shadow-none border p-2 h-100 rounded-3">
                       <div class="rounded-4 text-center mb-5">
                         <a href="app-academy-course-details.html"
@@ -470,7 +392,7 @@
                       </div>
                     </div>
                   </div>
-                  <div class="col-sm-6 col-lg-4">
+                  <div class="col-sm-12 col-lg-4">
                     <div class="card shadow-none border p-2 h-100 rounded-3">
                       <div class="rounded-4 text-center mb-5">
                         <a href="app-academy-course-details.html"
@@ -548,7 +470,7 @@
                       </div>
                     </div>
                   </div>
-                  <div class="col-sm-6 col-lg-4">
+                  <div class="col-sm-12 col-lg-4">
                     <div class="card shadow-none border p-2 h-100 rounded-3">
                       <div class="rounded-4 text-center mb-5">
                         <a href="app-academy-course-details.html"
@@ -626,7 +548,7 @@
                       </div>
                     </div>
                   </div>
-                  <div class="col-sm-6 col-lg-4">
+                  <div class="col-sm-12 col-lg-4">
                     <div class="card shadow-none border p-2 h-100 rounded-3">
                       <div class="rounded-4 text-center mb-5">
                         <a href="app-academy-course-details.html"
@@ -690,7 +612,7 @@
                       </div>
                     </div>
                   </div>
-                  <div class="col-sm-6 col-lg-4">
+                  <div class="col-sm-12 col-lg-4">
                     <div class="card shadow-none border p-2 h-100 rounded-3">
                       <div class="rounded-4 text-center mb-5">
                         <a href="app-academy-course-details.html"
@@ -821,6 +743,7 @@
                 </nav>
               </div>
             </div>
+          </div>
         </div>
       </div>
     </section>
@@ -861,7 +784,6 @@
       </div>
     </footer>
 
-
     <!-- / Layout wrapper -->
 
     <!-- Core JS -->
@@ -871,19 +793,15 @@
     <script src="/public/vendor/libs/popper/popper.js"></script>
     <script src="/public/vendor/js/bootstrap.js"></script>
     <script src="/public/vendor/libs/node-waves/node-waves.js"></script>
-    <script src="/public/vendor/libs/@algolia/autocomplete-js.js"></script>
-    <script src="/public/vendor/libs/perfect-scrollbar/perfect-scrollbar.js"></script>
     <script src="/public/vendor/libs/hammer/hammer.js"></script>
-    <script src="/public/vendor/libs/i18n/i18n.js"></script>
     <script src="/public/vendor/js/menu.js"></script>
     <!-- endbuild -->
 
     <!-- Vendors JS -->
     <script src="/public/vendor/libs/select2/select2.js"></script>
     <script src="/public/vendor/libs/plyr/plyr.js"></script>
-    <!-- Main JS -->
-    <script src="/public/js/main.js"></script>
     <!-- Page JS -->
     <script src="/public/js/app-academy-course.js"></script>
+    <script type="module" src="./src/main.js"></script>
   </body>
 </html>

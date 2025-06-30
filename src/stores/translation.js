@@ -32,8 +32,8 @@ export const defaultTranslations = {
     en: "Apartment's Services",
     es: "Servicios del Departamento",
   },
-  "apartment:home:accomodation": {
-    en: "Accomodation",
+  "apartment:home:accommodation": {
+    en: "Accommodation",
     es: "Alojamiento",
   },
   "apartment:home:tour": {

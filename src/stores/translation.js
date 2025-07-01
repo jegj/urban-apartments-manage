@@ -28,51 +28,51 @@ export const defaultTranslations = {
     en: "Spanish",
     es: "Español",
   },
-  "apartment:home:services": {
+  "apartment:title:services": {
     en: "Apartment's Services",
     es: "Servicios del Departamento",
   },
-  "apartment:home:accommodation": {
+  "apartment:title:accommodation": {
     en: "Accommodation",
     es: "Alojamiento",
   },
-  "apartment:home:tour": {
+  "apartment:title:tour": {
     en: "Tours and excursions",
     es: "Tours y excursiones",
   },
-  "apartment:home:tourist_places": {
+  "apartment:title:tourist_places": {
     en: "Tourist Places",
     es: "Sitios Turisticos",
   },
-  "apartment:home:additional_services": {
+  "apartment:title:additional_services": {
     es: "Servicios Adicionales",
     en: "Additional Services",
   },
-  "apartment:home:around": {
+  "apartment:title:around": {
     es: "Alrededor",
     en: "Around Me",
   },
-  "apartment:home:information": {
+  "apartment:title:information": {
     es: "Informacion",
     en: "Information",
   },
-  "apartment:home:luggage_storage": {
+  "apartment:title:luggage_storage": {
     es: "Guardado de Equipaje",
     en: "Luggage Storage",
   },
-  "apartment:home:taxi_request": {
+  "apartment:title:taxi_request": {
     es: "Solicita un Taxi",
     en: "Request a Taxi",
   },
-  "apartment:home:help-title": {
+  "apartment:title:help-title": {
     es: "¿Aún necesita ayuda?",
     en: "Still need help?",
   },
-  "apartment:home:help-button": {
+  "apartment:title:help-button": {
     es: "Contactanos",
     en: "Contact us",
   },
-  "apartment:home:help-description": {
+  "apartment:title:help-description": {
     es: "Nuestros especialistas estarán encantados de ayudarle.\nPóngase en contacto con nosotros en horario laboral o envíenos un correo electrónico las 24 horas del día, los 7 días de la semana, y nos pondremos en contacto con usted.",
     en: "Our specialists are always happy to help.\nContact us during standard business hours or email us 24/7 and we'll get back to you.",
   },

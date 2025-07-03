@@ -8,8 +8,8 @@
       content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0"
     />
     <meta name="robots" content="noindex, nofollow" />
-    <title>Patria #106</title>
-    <meta name="description" content="Patria #106" />
+    <title>Accommodation</title>
+    <meta name="description" content="Accommodation" />
     <!-- Favicon -->
     <link
       rel="icon"
@@ -107,13 +107,22 @@
               </span>
               <span
                 class="app-brand-text demo menu-text fw-semibold ms-2 ps-1 d-sm-block"
-                >Patria #103</span
+                >Accommodation</span
               >
             </a>
           </div>
           <!-- Menu logo wrapper: End -->
           <!-- Toolbar: Start -->
           <ul class="navbar-nav flex-row align-items-center ms-auto">
+            <li class="nav-item me-2 me-xl-0">
+              <a
+                class="nav-link hide-arrow me-sm-2"
+                href="javascript:void(0);"
+                aria-expanded="false"
+              >
+                <i class="icon-base ri ri-arrow-left-line icon-22px"></i>
+              </a>
+            </li>
             <li class="nav-item dropdown-language dropdown me-2 me-xl-0">
               <a
                 class="nav-link dropdown-toggle hide-arrow me-sm-2"
@@ -172,9 +181,94 @@
         <div class="row">
           <div class="col-lg-10 mx-auto">
             <div class="row g-6 mb-6">
-              <div class="col-md-6">
+              <div class="accordion mt-4" id="accordionWithIcon">
+                <div class="accordion-item active">
+                  <h2 class="accordion-header d-flex align-items-center">
+                    <button
+                      type="button"
+                      class="accordion-button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#accordionWithIcon-1"
+                      aria-expanded="true"
+                    >
+                      <i class="icon-base ri ri-bar-chart-fill me-2"></i>
+                      Header Option 1
+                    </button>
+                  </h2>
+
+                  <div
+                    id="accordionWithIcon-1"
+                    class="accordion-collapse collapse show"
+                    style=""
+                  >
+                    <div class="accordion-body">
+                      Lemon drops chocolate cake gummies carrot cake chupa chups
+                      muffin topping. Sesame snaps icing marzipan gummi bears
+                      macaroon dragée danish caramels powder. Bear claw dragée
+                      pastry topping soufflé. Wafer gummi bears marshmallow
+                      pastry pie.
+                    </div>
+                  </div>
+                </div>
+
+                <div class="accordion-item">
+                  <h2 class="accordion-header d-flex align-items-center">
+                    <button
+                      type="button"
+                      class="accordion-button collapsed"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#accordionWithIcon-2"
+                      aria-expanded="false"
+                    >
+                      <i class="icon-base ri ri-briefcase-line me-2"></i>
+                      Header Option 2
+                    </button>
+                  </h2>
+                  <div
+                    id="accordionWithIcon-2"
+                    class="accordion-collapse collapse"
+                  >
+                    <div class="accordion-body">
+                      Dessert ice cream donut oat cake jelly-o pie sugar plum
+                      cheesecake. Bear claw dragée oat cake dragée ice cream
+                      halvah tootsie roll. Danish cake oat cake pie macaroon
+                      tart donut gummies. Jelly beans candy canes carrot cake.
+                      Fruitcake chocolate chupa chups.
+                    </div>
+                  </div>
+                </div>
+
+                <div class="accordion-item">
+                  <h2 class="accordion-header d-flex align-items-center">
+                    <button
+                      type="button"
+                      class="accordion-button collapsed"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#accordionWithIcon-3"
+                      aria-expanded="false"
+                    >
+                      <i class="icon-base ri ri-gift-line me-2"></i>
+                      Header Option 3
+                    </button>
+                  </h2>
+                  <div
+                    id="accordionWithIcon-3"
+                    class="accordion-collapse collapse"
+                  >
+                    <div class="accordion-body">
+                      Oat cake toffee chocolate bar jujubes. Marshmallow brownie
+                      lemon drops cheesecake. Bonbon gingerbread marshmallow
+                      sweet jelly beans muffin. Sweet roll bear claw candy canes
+                      oat cake dragée caramels. Ice cream wafer danish cookie
+                      caramels muffin.
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!--
+              <div class="col-md-12">
                 <div class="card border shadow-none">
-                  <a href="/accommodation.html">
+                  <a href="#">
                     <div class="card-body text-center">
                       <i class="icon-base ri ri-home-4-line icon-48px"></i>
                       <h5
@@ -188,7 +282,23 @@
                 </div>
               </div>
 
-              <div class="col-md-6">
+              <div class="col-md-12">
+                <div class="card border shadow-none">
+                  <a href="#">
+                    <div class="card-body text-center">
+                      <i class="icon-base ri ri-home-4-line icon-48px"></i>
+                      <h5
+                        class="my-3"
+                        x-text="t('apartment:title:accommodation')"
+                      >
+                        Accommodation
+                      </h5>
+                    </div>
+                  </a>
+                </div>
+              </div>
+
+              <div class="col-md-12">
                 <div class="card border shadow-none">
                   <a href="#">
                     <div class="card-body text-center">
@@ -200,131 +310,11 @@
                   </a>
                 </div>
               </div>
-
-              <div class="col-md-6">
-                <div class="card border shadow-none">
-                  <a href="/tourist_places.html">
-                    <div class="card-body text-center">
-                      <i class="icon-base ri ri-camera-3-line icon-48px"></i>
-                      <h5
-                        class="my-3"
-                        x-text="t('apartment:title:tourist_places')"
-                      >
-                        Tourist Places
-                      </h5>
-                    </div>
-                  </a>
-                </div>
-              </div>
-
-              <div class="col-md-6">
-                <div class="card border shadow-none">
-                  <a href="#">
-                    <div class="card-body text-center">
-                      <i class="icon-base ri ri-handbag-line icon-48px"></i>
-                      <h5
-                        class="my-3"
-                        x-text="t('apartment:title:luggage_storage')"
-                      >
-                        Luggage Storage
-                      </h5>
-                    </div>
-                  </a>
-                </div>
-              </div>
-
-              <div class="col-md-6">
-                <div class="card border shadow-none">
-                  <a href="#">
-                    <div class="card-body text-center">
-                      <i class="icon-base ri ri-taxi-line icon-48px"></i>
-                      <h5
-                        class="my-3"
-                        x-text="t('apartment:title:taxi_request')"
-                      >
-                        Request a Taxi
-                      </h5>
-                    </div>
-                  </a>
-                </div>
-              </div>
-
-              <div class="col-md-6">
-                <div class="card border shadow-none">
-                  <a href="#">
-                    <div class="card-body text-center">
-                      <i
-                        class="icon-base ri ri-service-bell-line icon-48px"
-                      ></i>
-                      <h5
-                        class="my-3"
-                        x-text="t('apartment:title:additional_services')"
-                      >
-                        Additional Services
-                      </h5>
-                    </div>
-                  </a>
-                </div>
-              </div>
-
-              <div class="col-md-6">
-                <div class="card border shadow-none">
-                  <a href="#">
-                    <div class="card-body text-center">
-                      <i class="icon-base ri ri-map-2-line icon-48px"></i>
-                      <h5 class="my-3" x-text="t('apartment:title:around')">
-                        Around Me
-                      </h5>
-                    </div>
-                  </a>
-                </div>
-              </div>
-
-              <div class="col-md-6">
-                <div class="card border shadow-none">
-                  <a href="#">
-                    <div class="card-body text-center">
-                      <i class="icon-base ri ri-info-i icon-48px"></i>
-                      <h5
-                        class="my-3"
-                        x-text="t('apartment:title:information')"
-                      >
-                        Information
-                      </h5>
-                    </div>
-                  </a>
-                </div>
-              </div>
-            </div>
+            --></div>
           </div>
         </div>
       </div>
     </section>
-
-    <section class="section-py bg-body">
-      <div class="container">
-        <div class="row justify-content-center">
-          <div class="col-md-8 col-lg-6 text-center">
-            <h4 x-text="t('apartment:title:help-title')">Still need help?</h4>
-            <p x-text="t('apartment:title:help-description')">
-              Our specialists are always happy to help.<br />Contact us during
-              standard business hours or email us 24/7 and we'll get back to
-              you.
-            </p>
-            <div class="d-flex justify-content-center flex-wrap gap-6">
-              <a
-                href="javascript:void(0);"
-                class="btn btn-primary waves-effect waves-light"
-                x-text="t('apartment:title:help-button')"
-                >Contact us</a
-              >
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- / Sections:End -->
 
     <!-- Footer: Start -->
     <footer class="landing-footer">

@@ -1,5 +1,15 @@
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
 body {
   background-color: var(--bs-paper-bg);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 .section-py {
@@ -234,7 +244,7 @@ nav.layout-navbar .menu-text {
   --bs-footer-bottom-text: #d3d4dc;
   --bs-footer-bottom-bg: #211b2c;
   --bs-footer-top-bg: #241d31;
-  /* use dark variables as front footer having dark background */
+  margin-top: auto;
 }
 .landing-footer .footer-link,
 .landing-footer .footer-text {

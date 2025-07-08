@@ -8,8 +8,8 @@
       content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0"
     />
     <meta name="robots" content="noindex, nofollow" />
-    <title>Patria #106</title>
-    <meta name="description" content="Patria #106" />
+    <title>Accommodation</title>
+    <meta name="description" content="Accommodation" />
     <!-- Favicon -->
     <link
       rel="icon"
@@ -26,6 +26,7 @@
     <link rel="stylesheet" href="/public/vendor/fonts/iconify-icons.css" />
     <link rel="stylesheet" href="/public/vendor/css/core.css" />
     <link rel="stylesheet" href="/src/main.css" />
+    <link rel="stylesheet" href="/public/vendor/libs/leaflet/leaflet.css" />
     <script src="/public/vendor/js/helpers.js"></script>
   </head>
 
@@ -107,13 +108,22 @@
               </span>
               <span
                 class="app-brand-text demo menu-text fw-semibold ms-2 ps-1 d-sm-block"
-                >Patria #106</span
+                >Around Me</span
               >
             </a>
           </div>
           <!-- Menu logo wrapper: End -->
           <!-- Toolbar: Start -->
           <ul class="navbar-nav flex-row align-items-center ms-auto">
+            <li class="nav-item me-2 me-xl-0">
+              <a
+                class="nav-link hide-arrow me-sm-2"
+                href="history.back()"
+                aria-expanded="false"
+              >
+                <i class="icon-base ri ri-arrow-left-line icon-22px"></i>
+              </a>
+            </li>
             <li class="nav-item dropdown-language dropdown me-2 me-xl-0">
               <a
                 class="nav-link dropdown-toggle hide-arrow me-sm-2"
@@ -171,160 +181,16 @@
       <div class="container">
         <div class="row">
           <div class="col-lg-10 mx-auto">
-            <div class="row g-6 mb-6">
-              <div class="col-md-6">
-                <div class="card border shadow-none">
-                  <a href="/accommodation.html">
-                    <div class="card-body text-center">
-                      <i class="icon-base ri ri-home-4-line icon-48px"></i>
-                      <h5
-                        class="my-3"
-                        x-text="t('apartment:title:accommodation')"
-                      >
-                        Accommodation
-                      </h5>
-                    </div>
-                  </a>
-                </div>
-              </div>
-
-              <div class="col-md-6">
-                <div class="card border shadow-none">
-                  <a href="#">
-                    <div class="card-body text-center">
-                      <i class="icon-base ri ri-ticket-line icon-48px"></i>
-                      <h5 class="my-3" x-text="t('apartment:title:tour')">
-                        Tours and excursions
-                      </h5>
-                    </div>
-                  </a>
-                </div>
-              </div>
-
-              <div class="col-md-6">
-                <div class="card border shadow-none">
-                  <a href="/tourist_places.html">
-                    <div class="card-body text-center">
-                      <i class="icon-base ri ri-camera-3-line icon-48px"></i>
-                      <h5
-                        class="my-3"
-                        x-text="t('apartment:title:tourist_places')"
-                      >
-                        Tourist Places
-                      </h5>
-                    </div>
-                  </a>
-                </div>
-              </div>
-
-              <div class="col-md-6">
-                <div class="card border shadow-none">
-                  <a href="#">
-                    <div class="card-body text-center">
-                      <i class="icon-base ri ri-handbag-line icon-48px"></i>
-                      <h5
-                        class="my-3"
-                        x-text="t('apartment:title:luggage_storage')"
-                      >
-                        Luggage Storage
-                      </h5>
-                    </div>
-                  </a>
-                </div>
-              </div>
-
-              <div class="col-md-6">
-                <div class="card border shadow-none">
-                  <a href="#">
-                    <div class="card-body text-center">
-                      <i class="icon-base ri ri-taxi-line icon-48px"></i>
-                      <h5
-                        class="my-3"
-                        x-text="t('apartment:title:taxi_request')"
-                      >
-                        Request a Taxi
-                      </h5>
-                    </div>
-                  </a>
-                </div>
-              </div>
-
-              <div class="col-md-6">
-                <div class="card border shadow-none">
-                  <a href="#">
-                    <div class="card-body text-center">
-                      <i
-                        class="icon-base ri ri-service-bell-line icon-48px"
-                      ></i>
-                      <h5
-                        class="my-3"
-                        x-text="t('apartment:title:additional_services')"
-                      >
-                        Additional Services
-                      </h5>
-                    </div>
-                  </a>
-                </div>
-              </div>
-
-              <div class="col-md-6">
-                <div class="card border shadow-none">
-                  <a href="/around.html">
-                    <div class="card-body text-center">
-                      <i class="icon-base ri ri-map-2-line icon-48px"></i>
-                      <h5 class="my-3" x-text="t('apartment:title:around')">
-                        Around Me
-                      </h5>
-                    </div>
-                  </a>
-                </div>
-              </div>
-
-              <div class="col-md-6">
-                <div class="card border shadow-none">
-                  <a href="#">
-                    <div class="card-body text-center">
-                      <i class="icon-base ri ri-info-i icon-48px"></i>
-                      <h5
-                        class="my-3"
-                        x-text="t('apartment:title:information')"
-                      >
-                        Information
-                      </h5>
-                    </div>
-                  </a>
-                </div>
+            <div class="card">
+              <h5 class="card-header">User Location</h5>
+              <div class="card-body">
+                <div class="leaflet-map" id="userLocation"></div>
               </div>
             </div>
           </div>
         </div>
       </div>
     </section>
-
-    <section class="section-py bg-body">
-      <div class="container">
-        <div class="row justify-content-center">
-          <div class="col-md-8 col-lg-6 text-center">
-            <h4 x-text="t('apartment:title:help-title')">Still need help?</h4>
-            <p x-text="t('apartment:title:help-description')">
-              Our specialists are always happy to help.<br />Contact us during
-              standard business hours or email us 24/7 and we'll get back to
-              you.
-            </p>
-            <div class="d-flex justify-content-center flex-wrap gap-6">
-              <a
-                href="javascript:void(0);"
-                class="btn btn-primary waves-effect waves-light"
-                x-text="t('apartment:title:help-button')"
-                >Contact us</a
-              >
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- / Sections:End -->
 
     <!-- Footer: Start -->
     <footer class="landing-footer">
@@ -365,6 +231,8 @@
     </footer>
     <!-- Footer: End -->
     <script src="/public/vendor/js/bootstrap.js"></script>
+    <script src="/public/vendor/libs/leaflet/leaflet.js"></script>
+    <script src="/public/js/maps-leaflet.js"></script>
     <script type="module" src="./src/main.js"></script>
   </body>
 </html>

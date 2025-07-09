@@ -1,11 +1,12 @@
-import { NestFactory } from '@nestjs/core';
+/* eslint-disable no-console */
+import * as handlebars from 'handlebars';
 import {
   FastifyAdapter,
   NestFastifyApplication,
 } from '@nestjs/platform-fastify';
-import { join } from 'path';
 import { AppModule } from './app.module';
-import * as handlebars from 'handlebars';
+import { join } from 'path';
+import { NestFactory } from '@nestjs/core';
 
 async function bootstrap(): Promise<void> {
   const app = await NestFactory.create<NestFastifyApplication>(
@@ -18,7 +19,7 @@ async function bootstrap(): Promise<void> {
   });
   app.setViewEngine({
     engine: {
-      handlebars: handlebars,
+      handlebars,
     },
     templates: join(__dirname, '..', 'src', 'views'),
   });

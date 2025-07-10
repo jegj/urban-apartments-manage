@@ -9,7 +9,7 @@ export class UnitViewController {
   root(@Res() res: FastifyReply) {
     return res.view(
       'pages/home.unit.hbs',
-      { title: 'Hello world!' },
+      { message: 'Hello world!' },
       { layout: 'layouts/unit.hbs' },
     );
   }

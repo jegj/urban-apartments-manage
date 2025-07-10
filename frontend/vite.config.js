@@ -2,13 +2,12 @@ import { defineConfig } from 'vite';
 import { resolve } from 'path';
 
 export default defineConfig({
-  root: 'frontend',
   build: {
     outDir: '../public',
-    emptyOutDir: true,
+    emptyOutDir: false,
     rollupOptions: {
       input: {
-        main: resolve(__dirname, 'frontend/main.js'),
+        main: resolve(__dirname, 'main.js'),
       },
     },
   },

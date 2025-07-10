@@ -1,15 +1,16 @@
-import { Controller, Get, Render } from '@nestjs/common';
+import { Controller, Get, Res } from '@nestjs/common';
+import { FastifyReply } from 'fastify';
 
 @Controller('units')
 export class UnitViewController {
   constructor() {}
 
   @Get('demo')
-  @Render('pages/home.unit.hbs')
-  root() {
-    return {
-      layout: 'layouts/unit.hbs',
-      message: 'Hello world from nest!',
-    };
+  root(@Res() res: FastifyReply) {
+    return res.view(
+      'pages/home.unit.hbs',
+      { title: 'Hello world!' },
+      { layout: 'layouts/unit.hbs' },
+    );
   }
 }

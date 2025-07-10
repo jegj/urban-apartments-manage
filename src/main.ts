@@ -31,7 +31,6 @@ async function bootstrap(): Promise<void> {
     // layout: join('layouts', 'main.hbs'),
     options: {
       partials: {
-        unitHeader: join('partials', 'header.unit.hbs'),
         unitNavBar: join('partials', 'navbar.unit.hbs'),
         unitFooter: join('partials', 'footer.unit.hbs'),
       },

@@ -1,4 +1,5 @@
 /* eslint-disable no-console */
+import '@fastify/view';
 import * as handlebars from 'handlebars';
 import {
   FastifyAdapter,
@@ -7,6 +8,9 @@ import {
 import { AppModule } from './app.module';
 import { join } from 'path';
 import { NestFactory } from '@nestjs/core';
+
+const APP_ENV_DEV = 'dev';
+const APP_ENV = process.env.APP_ENV ?? APP_ENV_DEV;
 
 async function bootstrap(): Promise<void> {
   const app = await NestFactory.create<NestFastifyApplication>(
@@ -21,7 +25,20 @@ async function bootstrap(): Promise<void> {
     engine: {
       handlebars,
     },
-    templates: join(__dirname, '..', 'src', 'views'),
+    templates: join(__dirname, '..', 'views'),
+    root: join(__dirname, '..', 'views'),
+    includeViewExtension: true,
+    // layout: join('layouts', 'main.hbs'),
+    options: {
+      partials: {
+        unitHeader: join('partials', 'header.unit.hbs'),
+        unitNavBar: join('partials', 'navbar.unit.hbs'),
+        unitFooter: join('partials', 'footer.unit.hbs'),
+      },
+    },
+    defaultContext: {
+      isDev: APP_ENV === APP_ENV_DEV,
+    },
   });
   await app.listen(process.env.PORT ?? 3000);
   console.log(`Application is running on: ${await app.getUrl()}`);

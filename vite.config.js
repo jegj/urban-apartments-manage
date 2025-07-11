@@ -8,7 +8,7 @@ export default defineConfig({
     emptyOutDir: false,
     rollupOptions: {
       input: {
-        main: resolve(__dirname, 'frontend', 'main.js'),
+        main: resolve(__dirname, 'main.js'),
       },
     },
   },

@@ -1,0 +1,18 @@
+{
+  "name": "urbar-apartments-manage-frontend",
+  "version": "0.0.1",
+  "description": "Urban apartments frontend ",
+  "keywords": [
+    "frontend"
+  ],
+  "license": "ISC",
+  "author": "jegj57@gmail.com",
+  "type": "commonjs",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "alpinejs": "^3.14.9"
+  }
+}

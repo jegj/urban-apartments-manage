@@ -24,12 +24,10 @@
     <link rel='stylesheet' href='/public/vendor/css/core.css' />
     <link rel="stylesheet" href="/public/vendor/libs/plyr/plyr.css" />
     <link rel="stylesheet" href="/public/vendor/libs/leaflet/leaflet.css" />
-    {{! <link rel='stylesheet' href='/src/main.css' /> }}
     {{#if isDev}}
       <script type="module" src="http://localhost:5173/main.js"></script>
     {{else}}
       <link rel="stylesheet" href="/main.css" />
-      <script src="/main.js"></script>
     {{/if}}
     <script src='/public/vendor/js/helpers.js'></script>
   </head>
@@ -42,6 +40,8 @@
     <script src="/public/vendor/libs/plyr/plyr.js"></script>
     <script src="/public/vendor/libs/leaflet/leaflet.js"></script>
     <script src="/public/js/maps-leaflet.js"></script>
-    {{! <script type='module' src='./src/main.js'></script> }}
+    {{#unless isDev}}
+      <script src="/main.js"></script>
+    {{/unless}}
   </body>
 </html>

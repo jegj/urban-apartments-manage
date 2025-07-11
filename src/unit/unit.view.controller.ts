@@ -8,7 +8,7 @@ export class UnitViewController {
   @Get('demo/home')
   GetHome(@Res() res: FastifyReply) {
     return res.view(
-      'pages/home.unit.hbs',
+      'pages/unit/home.unit.hbs',
       { message: 'Hello world!' },
       { layout: 'layouts/unit.hbs' },
     );
@@ -17,7 +17,7 @@ export class UnitViewController {
   @Get('demo/accommodation')
   GetAccommodation(@Res() res: FastifyReply) {
     return res.view(
-      'pages/accommodation.unit.hbs',
+      'pages/unit/accommodation.unit.hbs',
       { message: 'Hello world!' },
       { layout: 'layouts/unit.hbs' },
     );
@@ -26,7 +26,16 @@ export class UnitViewController {
   @Get('demo/tourist-places')
   GetTouristPlaces(@Res() res: FastifyReply) {
     return res.view(
-      'pages/tourist_places.unit.hbs',
+      'pages/unit/tourist_places.unit.hbs',
+      { message: 'Hello world!' },
+      { layout: 'layouts/unit.hbs' },
+    );
+  }
+
+  @Get('demo/around')
+  GetAround(@Res() res: FastifyReply) {
+    return res.view(
+      'pages/unit/around.unit.hbs',
       { message: 'Hello world!' },
       { layout: 'layouts/unit.hbs' },
     );

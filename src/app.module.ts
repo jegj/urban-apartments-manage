@@ -15,18 +15,13 @@ import { UnitModule } from './unit/unit.module';
   imports: [
     ConfigModule.forRoot({ isGlobal: true }),
     I18nModule.forRootAsync({
-      useFactory: (configService: ConfigService) => {
-        const isDev = configService.get('APP_ENV') === EnvDefaults.APP_ENV;
-        // Uncomment the next line for debugging if needed:
-        console.log('===>', isDev);
-        return {
-          fallbackLanguage: configService.getOrThrow('FALLBACK_LANGUAGE'),
-          loaderOptions: {
-            path: path.join(__dirname, '/i18n/'),
-            watch: isDev,
-          },
-        };
-      },
+      useFactory: (configService: ConfigService) => ({
+        fallbackLanguage: configService.getOrThrow('FALLBACK_LANGUAGE'),
+        loaderOptions: {
+          path: path.join(__dirname, '/i18n/'),
+          watch: configService.get('APP_ENV') === EnvDefaults.APP_ENV,
+        },
+      }),
       resolvers: [
         { use: QueryResolver, options: ['lang'] },
         AcceptLanguageResolver,

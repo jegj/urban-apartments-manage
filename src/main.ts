@@ -6,15 +6,13 @@ import {
   NestFastifyApplication,
 } from '@nestjs/platform-fastify';
 import { AppModule } from './app.module';
+import { EnvDefaults } from 'config/env.default';
 import { join } from 'path';
 import { NestFactory } from '@nestjs/core';
 
-const DEFAULT_APP_ENV_DEV = 'dev';
-const DEFAULT_PORT = 3000;
-
-const APP_ENV = process.env.APP_ENV ?? DEFAULT_APP_ENV_DEV;
-const PORT = Number(process.env.PORT) || DEFAULT_PORT;
-const IS_DEV = APP_ENV === DEFAULT_APP_ENV_DEV;
+const APP_ENV = process.env.APP_ENV ?? EnvDefaults.APP_ENV;
+const PORT = Number(process.env.PORT) || EnvDefaults.PORT;
+const IS_DEV = APP_ENV === EnvDefaults.APP_ENV;
 
 const viewsPath = join(__dirname, '..', 'views');
 const publicPath = join(__dirname, '..', 'public');

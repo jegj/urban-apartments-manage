@@ -22,14 +22,13 @@
     "test:e2e": "jest --config ./test/jest-e2e.json"
   },
   "dependencies": {
-    "@fastify/static": "^8.2.0",
+    "@fastify/static": "8.2.0",
     "@fastify/view": "11.1.0",
-    "@nestjs/common": "^11.0.1",
+    "@nestjs/common": "11.1.3",
     "@nestjs/config": "4.0.2",
-    "@nestjs/core": "^11.0.1",
-    "@nestjs/platform-fastify": "^11.1.3",
-    "handlebars": "^4.7.8",
-    "hbs": "^4.2.0",
+    "@nestjs/core": "11.0.3",
+    "@nestjs/platform-fastify": "11.1.3",
+    "handlebars": "4.7.8",
     "reflect-metadata": "^0.2.2",
     "rxjs": "^7.8.1"
   },

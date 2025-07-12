@@ -9,26 +9,32 @@ import { AppModule } from './app.module';
 import { join } from 'path';
 import { NestFactory } from '@nestjs/core';
 
-const APP_ENV_DEV = 'dev';
-const APP_ENV = process.env.APP_ENV ?? APP_ENV_DEV;
+const DEFAULT_APP_ENV_DEV = 'dev';
+const DEFAULT_PORT = 3000;
+
+const APP_ENV = process.env.APP_ENV ?? DEFAULT_APP_ENV_DEV;
+const PORT = Number(process.env.PORT) || DEFAULT_PORT;
+const IS_DEV = APP_ENV === DEFAULT_APP_ENV_DEV;
+
+const viewsPath = join(__dirname, '..', 'views');
+const publicPath = join(__dirname, '..', 'public');
 
 async function bootstrap(): Promise<void> {
   const app = await NestFactory.create<NestFastifyApplication>(
     AppModule,
-    new FastifyAdapter({ logger: true }),
+    new FastifyAdapter({ logger: IS_DEV }),
   );
+
   app.useStaticAssets({
-    root: join(__dirname, '..', 'public'),
+    root: publicPath,
     prefix: '/public/',
   });
+
   app.setViewEngine({
-    engine: {
-      handlebars,
-    },
-    templates: join(__dirname, '..', 'views'),
-    root: join(__dirname, '..', 'views'),
+    engine: { handlebars },
+    templates: viewsPath,
+    root: viewsPath,
     includeViewExtension: true,
-    // layout: join('layouts', 'main.hbs'),
     options: {
       partials: {
         unitNavBar: join('partials', 'navbar.unit.hbs'),
@@ -36,13 +42,13 @@ async function bootstrap(): Promise<void> {
       },
     },
     defaultContext: {
-      isDev: APP_ENV === APP_ENV_DEV,
+      isDev: IS_DEV,
     },
   });
-  await app.listen(process.env.PORT ?? 3000);
-  console.log(`Application is running on: ${await app.getUrl()}`);
+  await app.listen(PORT);
 }
-bootstrap().catch((err: unknown) => {
+
+void bootstrap().catch((err: unknown) => {
   console.error('Error during bootstrap:', err);
   process.exit(1);
 });

@@ -1,4 +1,5 @@
 import { Controller, Get, Res } from '@nestjs/common';
+import { I18n, I18nContext } from 'nestjs-i18n';
 import { FastifyReply } from 'fastify';
 
 @Controller('units')
@@ -6,19 +7,19 @@ export class UnitViewController {
   constructor() {}
 
   @Get('demo/home')
-  GetHome(@Res() res: FastifyReply) {
+  GetHome(@I18n() i18n: I18nContext, @Res() res: FastifyReply) {
     return res.view(
       'pages/unit/home.unit.hbs',
-      { message: 'Hello world!' },
+      { layoutTitle: 'Patria #106a' },
       { layout: 'layouts/unit.hbs' },
     );
   }
 
   @Get('demo/accommodation')
-  GetAccommodation(@Res() res: FastifyReply) {
+  GetAccommodation(@I18n() i18n: I18nContext, @Res() res: FastifyReply) {
     return res.view(
       'pages/unit/accommodation.unit.hbs',
-      { message: 'Hello world!' },
+      { layoutTitle: i18n.t('apartment:title:accommodation') },
       { layout: 'layouts/unit.hbs' },
     );
   }
@@ -27,7 +28,7 @@ export class UnitViewController {
   GetTouristPlaces(@Res() res: FastifyReply) {
     return res.view(
       'pages/unit/tourist_places.unit.hbs',
-      { message: 'Hello world!' },
+      { layoutTitle: 'Patria #106' },
       { layout: 'layouts/unit.hbs' },
     );
   }
@@ -36,7 +37,7 @@ export class UnitViewController {
   GetAround(@Res() res: FastifyReply) {
     return res.view(
       'pages/unit/around.unit.hbs',
-      { message: 'Hello world!' },
+      { layoutTitle: 'Patria #106' },
       { layout: 'layouts/unit.hbs' },
     );
   }

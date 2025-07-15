@@ -21,6 +21,7 @@ import { UnitModule } from './unit/unit.module';
           path: path.join(__dirname, '/i18n/'),
           watch: configService.get('APP_ENV') === EnvDefaults.APP_ENV,
         },
+        viewEngine: 'hbs',
       }),
       resolvers: [
         { use: QueryResolver, options: ['lang'] },

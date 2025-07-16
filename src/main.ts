@@ -1,48 +1,37 @@
+/* eslint-disable @typescript-eslint/no-unsafe-member-access */
+/* eslint-disable @typescript-eslint/no-unsafe-call */
 /* eslint-disable no-console */
 import '@fastify/view';
-import * as handlebars from 'handlebars';
-import {
-  FastifyAdapter,
-  NestFastifyApplication,
-} from '@nestjs/platform-fastify';
+// import * as expressHandlebars from 'express-handlebars';
+import * as hbs from 'hbs';
 import { AppModule } from './app.module';
 import { EnvDefaults } from 'config/env.default';
 import { join } from 'path';
+import { NestExpressApplication } from '@nestjs/platform-express';
 import { NestFactory } from '@nestjs/core';
 
-const APP_ENV = process.env.APP_ENV ?? EnvDefaults.APP_ENV;
 const PORT = Number(process.env.PORT) || EnvDefaults.PORT;
-const IS_DEV = APP_ENV === EnvDefaults.APP_ENV;
-
-const viewsPath = join(__dirname, '..', 'views');
-const publicPath = join(__dirname, '..', 'public');
 
 async function bootstrap(): Promise<void> {
-  const app = await NestFactory.create<NestFastifyApplication>(
-    AppModule,
-    new FastifyAdapter({ logger: IS_DEV }),
+  const app = await NestFactory.create<NestExpressApplication>(AppModule);
+  app.useStaticAssets(join(__dirname, '..', 'public'));
+  app.setBaseViewsDir(join(__dirname, '..', 'views'));
+  app.setViewEngine('hbs');
+  // app.set('view options', {
+  //   layout: 'main',
+  //   layoutsDir: join(__dirname, '..', 'views', 'layouts'),
+  // });
+  hbs.registerPartials(join(__dirname, '..', '/views/partials'));
+  /*
+  appp.engine(
+    'hbs',
+    expressHandlebars.engine({
+      extname: 'hbs',
+      layoutsDir: join(__dirname, '..', 'views', 'layouts'),
+      partialsDir: join(__dirname, '..', 'views', 'partials'),
+    }),
   );
-
-  app.useStaticAssets({
-    root: publicPath,
-    prefix: '/public/',
-  });
-
-  app.setViewEngine({
-    engine: { handlebars },
-    templates: viewsPath,
-    root: viewsPath,
-    includeViewExtension: true,
-    options: {
-      partials: {
-        unitNavBar: join('partials', 'navbar.unit.hbs'),
-        unitFooter: join('partials', 'footer.unit.hbs'),
-      },
-    },
-    defaultContext: {
-      isDev: IS_DEV,
-    },
-  });
+  */
   await app.listen(PORT);
 }
 

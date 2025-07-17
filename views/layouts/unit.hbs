@@ -12,7 +12,7 @@
     <link
       rel='icon'
       type='image/x-icon'
-      href='//img/favicon/favicon.ico'
+      href='/img/favicon/favicon.ico'
     />
     <link rel='preconnect' href='https://fonts.googleapis.com' />
     <link rel='preconnect' href='https://fonts.gstatic.com' crossorigin />
@@ -24,7 +24,11 @@
     <link rel='stylesheet' href='/vendor/css/core.css' />
     <link rel="stylesheet" href="/vendor/libs/plyr/plyr.css" />
     <link rel="stylesheet" href="/vendor/libs/leaflet/leaflet.css" />
-    <link rel="stylesheet" href="/assets/main.css" />
+    {{#if (isDev)}}
+      <script type="module" src="http://localhost:5173/main.js"></script>
+    {{else}}
+      <link rel="stylesheet" href="/main.css" />
+    {{/if}}
     <script src='/vendor/js/helpers.js'></script>
   </head>
 
@@ -36,6 +40,8 @@
     <script src="/vendor/libs/plyr/plyr.js"></script>
     <script src="/vendor/libs/leaflet/leaflet.js"></script>
     <script src="/js/maps-leaflet.js"></script>
-    <script src="/assets/main.js"></script>
+    {{#unless (isDev)}}
+      <script src="/main.js"></script>
+    {{/unless}}
   </body>
 </html>

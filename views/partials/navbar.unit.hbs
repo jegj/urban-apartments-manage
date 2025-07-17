@@ -88,27 +88,17 @@
           </a>
           <ul class='dropdown-menu dropdown-menu-end'>
             <li>
-              <a
-                class='dropdown-item waves-effect'
-                href='javascript:void(0);'
-                data-language='en'
-                data-text-direction='ltr'
-                @click="setLanguage('en')"
-                :class="{ 'active': lang === 'en' }"
-              >
-                <span>English</span>
+              <a class='dropdown-item waves-effect' href='javascript:void(0);'>
+                <span>
+                  {{t 'navbar.navbar:translate:english'}}
+                </span>
               </a>
             </li>
             <li>
-              <a
-                class='dropdown-item waves-effect'
-                href='javascript:void(0);'
-                data-language='es'
-                data-text-direction='ltr'
-                @click="setLanguage('es')"
-                :class="{ 'active': lang === 'es' }"
-              >
-                <span>Spanish</span>
+              <a class='dropdown-item waves-effect' href='javascript:void(0);'>
+                <span>
+                  {{t 'navbar.navbar:translate:spanish'}}
+                </span>
               </a>
             </li>
           </ul>

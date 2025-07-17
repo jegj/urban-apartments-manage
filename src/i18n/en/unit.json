@@ -1,4 +1,14 @@
 {
   "apartment:title:accommodation": "Accommodation",
-  "test": "eng"
+  "apartment:title:services": "Apartment's Services",
+  "apartment:title:tour": "Tours and excursions",
+  "apartment:title:tourist_places": "Tourist Places",
+  "apartment:title:additional_services": "Additional Services",
+  "apartment:title:around": "Around Me",
+  "apartment:title:information": "Information",
+  "apartment:title:luggage_storage": "Luggage Storage",
+  "apartment:title:taxi_request": "Request a Taxi",
+  "apartment:title:help-title": "Still need help?",
+  "apartment:title:help-button": "Contact us",
+  "apartment:title:help-description": "Our specialists are always happy to help.\nContact us during standard business hours or email us 24/7 and we'll get back to you."
 }

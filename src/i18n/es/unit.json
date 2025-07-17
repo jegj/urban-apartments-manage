@@ -1,4 +1,14 @@
 {
   "apartment:title:accommodation": "alojamiento",
-  "test": "es"
+  "apartment:title:services": "Servicios del Departamento",
+  "apartment:title:tour": "Tours y excursiones",
+  "apartment:title:tourist_places": "Sitios Turisticos",
+  "apartment:title:additional_services": "Servicios Adicionales",
+  "apartment:title:around": "Alrededor",
+  "apartment:title:information": "Informacion",
+  "apartment:title:luggage_storage": "Guardado de Equipaje",
+  "apartment:title:taxi_request": "Solicita un Taxi",
+  "apartment:title:help-title": "¿Aún necesita ayuda?",
+  "apartment:title:help-button": "Contactanos",
+  "apartment:title:help-description": "Nuestros especialistas estarán encantados de ayudarle.\nPóngase en contacto con nosotros en horario laboral o envíenos un correo electrónico las 24 horas del día, los 7 días de la semana, y nos pondremos en contacto con usted."
 }

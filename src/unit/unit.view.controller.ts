@@ -9,7 +9,7 @@ export class UnitViewController {
   @Render('pages/unit/home.unit.hbs')
   GetHome() {
     return {
-      layoutTitle: 'Patria #106a',
+      layoutTitle: 'Patria #106',
       layout: 'layouts/unit.hbs',
     };
   }
@@ -27,16 +27,16 @@ export class UnitViewController {
   @Render('pages/unit/tourist_places.unit.hbs')
   GetTouristPlaces(@I18n() i18n: I18nContext) {
     return {
-      layoutTitle: i18n.t('unit.apartment:title:accommodation'),
+      layoutTitle: i18n.t('unit.apartment:title:tourist_places'),
       layout: 'layouts/unit.hbs',
     };
   }
 
   @Get('demo/around')
-  @Render('pages/unit/tourist_places.unit.hbs')
+  @Render('pages/unit/around.unit.hbs')
   GetAround(@I18n() i18n: I18nContext) {
     return {
-      layoutTitle: i18n.t('unit.apartment:title:accommodation'),
+      layoutTitle: i18n.t('unit.apartment:title:around'),
       layout: 'layouts/unit.hbs',
     };
   }

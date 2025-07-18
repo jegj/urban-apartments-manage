@@ -11,6 +11,7 @@ export class UnitViewController {
     return {
       layoutTitle: 'Patria #106',
       layout: 'layouts/unit.hbs',
+      unitImageBanner: '/img/pages/gray_apartment1.jpg',
     };
   }
 
@@ -20,6 +21,7 @@ export class UnitViewController {
     return {
       layoutTitle: i18n.t('unit.apartment:title:accommodation'),
       layout: 'layouts/unit.hbs',
+      unitImageBanner: '/img/pages/gray_apartment1.jpg',
     };
   }
 
@@ -29,6 +31,7 @@ export class UnitViewController {
     return {
       layoutTitle: i18n.t('unit.apartment:title:tourist_places'),
       layout: 'layouts/unit.hbs',
+      unitImageBanner: '/img/pages/gray_apartment1.jpg',
     };
   }
 
@@ -38,6 +41,7 @@ export class UnitViewController {
     return {
       layoutTitle: i18n.t('unit.apartment:title:around'),
       layout: 'layouts/unit.hbs',
+      unitImageBanner: '/img/pages/gray_apartment1.jpg',
     };
   }
 }

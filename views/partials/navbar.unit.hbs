@@ -79,6 +79,18 @@
       <!-- Menu logo wrapper: End -->
       <!-- Toolbar: Start -->
       <ul class='navbar-nav flex-row align-items-center ms-auto'>
+        {{#if showGoBack}}
+          <li class='nav-item me-2 me-xl-0'>
+            <a
+              class='nav-link hide-arrow me-sm-2'
+              href='javascript:void(0);'
+              aria-expanded='false'
+              onclick='window.history.back();'
+            >
+              <i class='icon-base ri ri-arrow-left-line icon-22px'></i>
+            </a>
+          </li>
+        {{/if}}
         <li class='nav-item dropdown-language dropdown me-2 me-xl-0'>
           <a
             class='nav-link dropdown-toggle hide-arrow me-sm-2'

@@ -7,6 +7,7 @@ import {
 } from 'nestjs-i18n';
 import { ConfigModule, ConfigService } from '@nestjs/config';
 import { AppController } from './app.controller';
+import { AuthModule } from 'auth/auth.module';
 import { EnvDefaults } from 'config/env.default';
 import { Module } from '@nestjs/common';
 import { UnitModule } from './unit/unit.module';
@@ -31,6 +32,7 @@ import { UnitModule } from './unit/unit.module';
       inject: [ConfigService],
     }),
     UnitModule,
+    AuthModule,
   ],
   controllers: [AppController],
   providers: [],

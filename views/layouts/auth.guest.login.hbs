@@ -6,9 +6,9 @@
       content='width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0'
     />
     <meta name='robots' content='noindex, nofollow' />
-    <title>Demo: Login Basic - Pages | Materialize - Bootstrap Dashboard PRO</title>
+    <title>Login</title>
     <meta name='description' content='' />
-    <link rel='icon' type='image/x-icon' href='img/favicon/favicon.ico' />
+    <link rel='icon' type='image/x-icon' href='/img/favicon/favicon.ico' />
     <link rel='preconnect' href='https://fonts.googleapis.com' />
     <link rel='preconnect' href='https://fonts.gstatic.com' crossorigin />
     <link
@@ -16,21 +16,7 @@
       rel='stylesheet'
     />
     <link rel='stylesheet' href='/vendor/fonts/iconify-icons.css' />
-    <link
-      rel='stylesheet'
-      href='../../assets/vendor/libs/node-waves/node-waves.css'
-    />
-
     <link rel='stylesheet' href='/vendor/css/core.css' />
-    <link
-      rel='stylesheet'
-      href='vendor/libs/perfect-scrollbar/perfect-scrollbar.css'
-    />
-
-    <link
-      rel='stylesheet'
-      href='vendor/libs/@form-validation/form-validation.css'
-    />
     {{#if (isDev)}}
       <script type='module' src='http://localhost:5173/main.js'></script>
     {{else}}
@@ -42,17 +28,10 @@
   <body>
 
     {{{body}}}
-    <script src='vendor/libs/jquery/jquery.js'></script>
-    <script src='vendor/libs/popper/popper.js'></script>
     <script src='/vendor/js/bootstrap.js'></script>
-    <script src='vendor/libs/node-waves/node-waves.js'></script>
-    <script src='vendor/libs/@algolia/autocomplete-js.js'></script>
-    <script src='vendor/libs/perfect-scrollbar/perfect-scrollbar.js'></script>
-    <script src='vendor/libs/hammer/hammer.js'></script>
-    <script src='vendor/js/menu.js'></script>
-    <script src='vendor/libs/@form-validation/popular.js'></script>
-    <script src='vendor/libs/@form-validation/bootstrap5.js'></script>
-    <script src='vendor/libs/@form-validation/auto-focus.js'></script>
+    <script src='/vendor/libs/@form-validation/popular.js'></script>
+    <script src='/vendor/libs/@form-validation/bootstrap5.js'></script>
+    <script src='/vendor/libs/@form-validation/auto-focus.js'></script>
     {{#unless (isDev)}}
       <script src='/main.js'></script>
     {{/unless}}

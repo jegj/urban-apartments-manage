@@ -6,13 +6,11 @@ export class AuthViewController {
   constructor() {}
 
   @Get('guest/login')
-  @Render('pages/auth/guest.login.hbs')
+  @Render('pages/auth/login.auth.hbs')
   GetHome() {
     return {
-      layoutTitle: 'Patria #106',
       layout: 'layouts/auth.guest.login.hbs',
       unitImageBanner: '/img/pages/gray_apartment1.jpg',
-      showGoBack: false,
     };
   }
 }

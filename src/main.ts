@@ -1,4 +1,5 @@
 /* eslint-disable no-console */
+import * as cookieParser from 'cookie-parser';
 import * as hbs from 'hbs';
 import { AppModule } from './app.module';
 import { EnvDefaults } from 'config/env.default';
@@ -12,6 +13,9 @@ const IS_DEV = APP_ENV === EnvDefaults.APP_ENV;
 
 async function bootstrap(): Promise<void> {
   const app = await NestFactory.create<NestExpressApplication>(AppModule);
+
+  app.use(cookieParser());
+
   app.useStaticAssets(join(__dirname, '..', 'public'));
   app.setBaseViewsDir(join(__dirname, '..', 'views'));
   app.setViewEngine('hbs');

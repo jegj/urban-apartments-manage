@@ -77,7 +77,7 @@
         </div>
         <!-- /Logo -->
 
-        <div class='card-body mt-1'>
+        <div class='card-body mt-1' x-data='guest_login'>
           <h4 class='mb-1'>Welcome to Materialize! 👋</h4>
           <p class='mb-5'>Please use the pincode provided by your guest</p>
           <form
@@ -91,7 +91,7 @@
                 <div class='input-group input-group-merge'>
                   <div class='form-floating form-floating-outline'>
                     <input
-                      type='password'
+                      :type=" showPassword ? 'text' : 'password' "
                       id='password'
                       class='form-control'
                       name='password'
@@ -100,9 +100,16 @@
                     />
                     <label for='password'>Pincode</label>
                   </div>
-                  <span class='input-group-text cursor-pointer'><i
-                      class='icon-base ri ri-eye-off-line icon-20px'
-                    ></i></span>
+                  <a
+                    class='input-group-text cursor-pointer'
+                    @click='showPassword = !showPassword'
+                  >
+                    <i
+                      class='icon-base ri icon-20px'
+                      :class="showPassword ? 'ri-eye-line' : 'ri-eye-off-line'"
+                    >
+                    </i>
+                  </a>
                 </div>
               </div>
             </div>

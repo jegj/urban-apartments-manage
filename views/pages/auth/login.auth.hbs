@@ -84,7 +84,8 @@
             id='formAuthentication'
             class='mb-5'
             action='index.html'
-            method='GET'
+            method='POST'
+            @submit.prevent='validate() && $el.submit()'
           >
             <div class='mb-5'>
               <div class='form-password-toggle form-control-validation'>
@@ -97,6 +98,9 @@
                       name='password'
                       placeholder='&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;'
                       aria-describedby='password'
+                      x-model='pincode'
+                      :class="isValid ? '' : 'is-invalid'"
+                      @input='validate()'
                     />
                     <label for='password'>Pincode</label>
                   </div>
@@ -110,6 +114,11 @@
                     >
                     </i>
                   </a>
+                </div>
+                <div class='invalid-feedback'>
+                  <div data-field='password' data-validator='notEmpty'>
+                    Please enter your password
+                  </div>
                 </div>
               </div>
             </div>

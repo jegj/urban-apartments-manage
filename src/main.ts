@@ -6,6 +6,7 @@ import { EnvDefaults } from 'config/env.default';
 import { join } from 'path';
 import { NestExpressApplication } from '@nestjs/platform-express';
 import { NestFactory } from '@nestjs/core';
+import { ValidationPipe } from '@nestjs/common';
 
 const PORT = Number(process.env.PORT) || EnvDefaults.PORT;
 const APP_ENV = process.env.APP_ENV ?? EnvDefaults.APP_ENV;
@@ -15,6 +16,8 @@ async function bootstrap(): Promise<void> {
   const app = await NestFactory.create<NestExpressApplication>(AppModule);
 
   app.use(cookieParser());
+
+  app.useGlobalPipes(new ValidationPipe());
 
   app.useStaticAssets(join(__dirname, '..', 'public'));
   app.setBaseViewsDir(join(__dirname, '..', 'views'));

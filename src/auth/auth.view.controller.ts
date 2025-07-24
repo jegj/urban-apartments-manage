@@ -10,7 +10,6 @@ export class AuthViewController {
   GetHome() {
     return {
       layout: 'layouts/auth.guest.login.hbs',
-
       unitImageBanner: '/img/pages/gray_apartment1.jpg',
     };
   }

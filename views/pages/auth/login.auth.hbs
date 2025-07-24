@@ -93,11 +93,10 @@
                   <div class='form-floating form-floating-outline'>
                     <input
                       :type=" showPassword ? 'text' : 'password' "
-                      id='password'
+                      id='pincode'
                       class='form-control'
-                      name='password'
+                      name='pincode'
                       placeholder='&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;'
-                      aria-describedby='password'
                       x-model='pincode'
                       :class="isValid ? '' : 'is-invalid'"
                       @input='validate()'
@@ -116,8 +115,7 @@
                   </a>
                 </div>
                 <div class='invalid-feedback'>
-                  <div data-field='password' data-validator='notEmpty'>
-                    Please enter your password
+                  <div x-text='error'>
                   </div>
                 </div>
               </div>

@@ -21,4 +21,8 @@ export default () => ({
   get isValid() {
     return this.errors.length === 0;
   },
+
+  get error() {
+    return this.errors.length > 0 ? this.errors[0] : '';
+  },
 });

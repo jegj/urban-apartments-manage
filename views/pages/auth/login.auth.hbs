@@ -83,10 +83,18 @@
           <form
             id='formAuthentication'
             class='mb-5'
-            action='index.html'
+            action='/auth/guest/login'
             method='POST'
             @submit.prevent='validate() && $el.submit()'
-          >
+          
+            {{#if errors}}
+              <span>errors</span>
+              <ul class="error-list">
+                {{#each errors}}
+                  <li>{{this}}</li>
+                {{/each}}
+              </ul>
+            {{/if}}
             <div class='mb-5'>
               <div class='form-password-toggle form-control-validation'>
                 <div class='input-group input-group-merge'>

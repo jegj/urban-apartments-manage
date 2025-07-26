@@ -1,4 +1,14 @@
-import { Controller, Get, Render } from '@nestjs/common';
+/* eslint-disable arrow-parens */
+import {
+  Body,
+  Controller,
+  Get,
+  Post,
+  Render,
+  UsePipes,
+  ValidationPipe,
+} from '@nestjs/common';
+import { LoginGuestDto } from './dto/login.guest.dto';
 // import { I18n, I18nContext } from 'nestjs-i18n';
 
 @Controller('auth')
@@ -7,10 +17,24 @@ export class AuthViewController {
 
   @Get('guest/login')
   @Render('pages/auth/login.auth.hbs')
-  GetHome() {
+  GetLogin() {
     return {
       layout: 'layouts/auth.guest.login.hbs',
-      unitImageBanner: '/img/pages/gray_apartment1.jpg',
+      backendErrors: JSON.stringify([]),
+    };
+  }
+
+  @Post('guest/login')
+  @Render('pages/auth/login.auth.hbs')
+  @UsePipes(new ValidationPipe({ whitelist: true }))
+  PostLogin(
+    @Body(new ValidationPipe({ exceptionFactory: (errors) => errors }))
+    body: LoginGuestDto,
+  ) {
+    return {
+      layout: 'layouts/auth.guest.login.hbs',
+      body,
+      backendErrors: JSON.stringify([]),
     };
   }
 }

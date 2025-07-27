@@ -22,8 +22,9 @@ export class AuthViewController {
   @Render('pages/auth/login.auth.hbs')
   GetLogin() {
     return {
+      data: {},
       layout: 'layouts/auth.guest.login.hbs',
-      backendErrors: JSON.stringify([]),
+      errors: [],
     };
   }
 
@@ -33,25 +34,19 @@ export class AuthViewController {
     body: any,
     @Res() res: Response,
   ) {
-    // Transform the plain object to an instance of the DTO
-    const validLogin = plainToInstance(LoginGuestDto, body, {
-      excludeExtraneousValues: true, // Only include validated properties
-    });
-
-    // Validate the transformed DTO instance
+    const validLogin = plainToInstance(LoginGuestDto, body, {});
     const vErrors = await validate(validLogin, { whitelist: true });
-
     if (vErrors.length > 0) {
       const backendErrors = vErrors.flatMap((err) =>
         Object.values(err.constraints || {}),
       );
-
       return res
         .status(HttpStatus.BAD_REQUEST)
         .render('pages/auth/login.auth.hbs', {
           layout: 'layouts/auth.guest.login.hbs',
-          // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
-          data: body,
+          data: {
+            pincode: validLogin.pincode,
+          },
           errors: backendErrors,
         });
     }

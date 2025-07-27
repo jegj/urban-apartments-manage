@@ -86,7 +86,6 @@
             action='/auth/guest/login'
             method='POST'
             @submit.prevent='validate() && $el.submit()'
-          
             {{#if errors}}
               <span>errors</span>
               <ul class="error-list">
@@ -108,6 +107,9 @@
                       x-model='pincode'
                       :class="isValid ? '' : 'is-invalid'"
                       @input='validate()'
+                      x-init="pincode = '{{{data.pincode}}}'"
+                      minlength='6'
+                      maxlength='6'
                     />
                     <label for='password'>Pincode</label>
                   </div>

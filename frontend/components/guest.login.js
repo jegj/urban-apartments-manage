@@ -25,8 +25,4 @@ export default () => ({
   get error() {
     return this.errors.length > 0 ? this.errors[0] : '';
   },
-
-  setErrors(errors) {
-    this.errors = Array.isArray(errors) ? errors : [errors];
-  },
 });

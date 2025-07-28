@@ -86,9 +86,9 @@
             action='/auth/guest/login'
             method='POST'
             @submit.prevent='validate() && $el.submit()'
+          >
             {{#if errors}}
-              <span>errors</span>
-              <ul class="error-list">
+              <ul class='error-list'>
                 {{#each errors}}
                   <li>{{this}}</li>
                 {{/each}}
@@ -111,7 +111,7 @@
                       minlength='6'
                       maxlength='6'
                     />
-                    <label for='password'>Pincode</label>
+                    <label for='pincode'>Pincode</label>
                   </div>
                   <a
                     class='input-group-text cursor-pointer'

@@ -448,3 +448,31 @@ nav.layout-navbar .menu-text {
     margin-inline: 1px;
   }
 }
+
+.error-list {
+  border-radius: 4px;
+  color: var(--bs-form-invalid-color);
+  font-size: 0.875rem;
+  padding: 0.5rem;
+}
+
+.error-list ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.error-list li {
+  margin-bottom: 0.5rem;
+  padding-left: 0.5rem;
+  position: relative;
+}
+
+.error-list li:before {
+  position: absolute;
+  left: 0.5rem;
+}
+
+.error-list li:last-child {
+  margin-bottom: 0;
+}
